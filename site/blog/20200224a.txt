@@ -34,7 +34,7 @@ boilerplate tying the whole thing together.
 The 'docs' directory contains the compiled version of the site and
 the 'site' directory contains the sources.
 
-Sources: https://github.com/kisslinux/website
+Sources: https://github.com/kiss-community/website
 
 
 LAPTOP TROUBLES

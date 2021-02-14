@@ -7,7 +7,7 @@
 <a href=/package-system>Package System</a> |
 <a href=/testimonials>Testimonials</a> |
 <a href=/projects>Software</a> |
-<a href=https://github.com/kisslinux>GitHub</a> |
+<a href=https://github.com/kiss-community>GitHub</a> |
 <a href=/guidestones>GUIDESTONES(<b>NEW</b>)</a> |
 <a href=/contact>Contact</a> |
 <a href=/donate>Donate</a></nav><main><h1>31/08/2019: Removal of ca-certificates</h1><p>KISS now uses the certificates bundled with <code>libressl</code>.</p><p>Steps for removal of <code>ca-certificates</code>.</p><ul><li><code>kiss build libressl</code></li><li><code>kiss remove ca-certificates</code></li><li><code>rm -rf /etc/ssl</code></li><li><code>kiss install libressl</code></li></ul><p><strong>Update</strong>: A script is also provided in <code>/etc/ssl</code> to update the certificate bundle independently of the package manager.</p><footer style='clear:both'><h3>Legal stuff</h3><div><p>The registered trademark Linux® is used pursuant to a sublicense from the Linux Foundation, the exclusive licensee of Linus Torvalds, owner of the mark on a world­wide basis.</p><p>© <a href="https://github.com/dylanaraps">Dylan Araps</a> 2019-2020</p></div></footer></main>

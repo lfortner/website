@@ -128,18 +128,18 @@ became too messy as new pages were been added this month.
 A "Community" page has been added to document and list notable
 projects, repositories and software by members of the community.
 
-    - https://k1ss.org/community
+    - https://k1ss.armaanb.net/community
 
 A "Ports" page has been added to make known the existence of
 various ports of KISS to other architectures.
 
-    - https://k1ss.org/ports
+    - https://k1ss.armaanb.net/ports
 
 A "Package Manager" page has been added to document the package
 manager, how its configured, its dependencies, etc. This will grow
 over the next month to include a FAQ and more information.
 
-    - https://k1ss.org/package-manager
+    - https://k1ss.armaanb.net/package-manager
 
 A new 404 page was added, new screenshots were added and countless
 minor changes have been made throughout the website as well.

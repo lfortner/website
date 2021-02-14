@@ -428,7 +428,7 @@ used.
     +--------------------------------------------------------------------------+
     |                                                                          |
     |   # This can live anywhere on the system.                                |
-    |   $ git clone https://github.com/kisslinux/community                     |
+    |   $ git clone https://github.com/kiss-community/community                     |
     |                                                                          |
     +--------------------------------------------------------------------------+
     | 2. Enable the repository                                                 |

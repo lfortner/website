@@ -98,7 +98,7 @@ page() {
 }
 
 main() {
-    wiki_url=https://github.com/kisslinux/wiki
+    wiki_url=https://github.com/kiss-community/wiki
     repo_url=https://github.com
 
     rm -rf docs

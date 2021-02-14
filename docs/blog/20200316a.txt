@@ -168,7 +168,7 @@ NOTE: The maintainer of the software _could_ distribute tarballs
       which include all of the crates via 'cargo vendor' though this
       isn't a common practice from what I've seen.
 
-Source: https://github.com/kisslinux/repo/tree/master/extra/cbindgen
+Source: https://github.com/kiss-community/repo/tree/master/extra/cbindgen
 
 
 REMOVING DBUS FROM IWD (AGAIN)
