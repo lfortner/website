@@ -3,7 +3,6 @@ ________________________________________________________________________________
 
 Meet the team:
 
-
 Dylan Araps ($/dylanaraps)
 ________________________________________________________________________________
 
@@ -11,5 +10,9 @@ ________________________________________________________________________________
 - Creator of neofetch, pfetch, pywal, fff, sowm and many more.
 - Creator of the pure bash and pure sh bibles.
 
+kiss-community ($/kiss-community)
+________________________________________________________________________________
 
-
+- GitHub organization taking care of KISS.
+- Passionate free software users, developers, and minimalists.
+- People from all walks of life who just really like KISS.
