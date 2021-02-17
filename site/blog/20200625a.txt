@@ -72,7 +72,7 @@ Every page on the website has been rewritten to fit the aforementioned changes
 and the reading experience should now be far more enjoyable. For those wondering
 what the old website used to look like, see [1].
 
-[0] $/kisslinux/website/blob/master/make#L5-L29
+[0] $/kiss-community/website/blob/master/make#L5-L29
 [1] https://web.archive.org/web/20200521223143/https://k1ss.armaanb.net/
 
 
@@ -99,7 +99,7 @@ The Wiki has reopened! SEE: #/wiki and #/wiki/help/about-this-wiki
 |          |                                                        | .--.     |
 |          '-------------------------------------------------------\\|o_o |    |
 |                                                                    |:_/ |    |
-|  Sources: $/kisslinux/wiki                                        //   \ \   |
+|  Sources: $/kiss-community/wiki                                        //   \ \   |
 |                                                                  (|     | )  |
 +------------------------------------------------------------------------------+
 
@@ -113,7 +113,7 @@ KISS and beyond.
 
 Once again, a big thank you to everyone writing pages.
 
-[2] $/kisslinux/website/commit/62e3ed0e974b3eb5b636e7a91914992cd9ea62c8
+[2] $/kiss-community/website/commit/62e3ed0e974b3eb5b636e7a91914992cd9ea62c8
 
 
 [4.0] kiss help

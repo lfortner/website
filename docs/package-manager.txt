@@ -8,7 +8,7 @@ code (excluding blank lines/comments of which there are many).
 The package manager is merely an implementation of the package format, its
 requirements and some added sugar on top.
 
-Source: $/kisslinux/kiss
+Source: $/kiss-community/kiss
 
 
 [0.0] Index

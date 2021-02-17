@@ -90,7 +90,7 @@ strength of KISS is not in its software choices but in its software omissions.
     must be implemented externally. KISS provides an init-agnostic and portable
     base with which any init and service manager can be used.
 
-    More information: $/kisslinux/init
+    More information: $/kiss-community/init
 
 
     [1.4] SSL Library

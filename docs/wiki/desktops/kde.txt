@@ -72,7 +72,7 @@ Assuming that you keep these repositories in $HOME,
 
 +------------------------------------------------------------------------------+
 |                                                                              |
-|   $ git clone https://github.com/kisslinux/community                         |
+|   $ git clone https://github.com/kiss-community/community                         |
 |   $ git clone https://github.com/dilyn-corner/KISS-kde                       |
 |                                                                              |
 |   $ export KISS_PATH="$HOME/KISS-kde/extra:$KISS_PATH"                       |

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-find . -type f | \
+find . -type f -name '*.txt' | \
   while read i; do
-    sed -i 's|https://k1ss.armaanb.net|https://k1ss.armaanb.net|g' ${i}
-    sed -i 's|https://github.com/kiss-community|https://github.com/kiss-community|g' ${i}
+    sed -i -e 's|https://k1ss.armaanb.net|https://k1ss.armaanb.net|g' \
+      -e 's|\$/kisslinux/|\$/kiss-community/|g' ${i}
   done

@@ -34,7 +34,7 @@ ________________________________________________________________________________
   fields separated by lines and spaces. Easily parseable via any programming
   language or with basic UNIX utilities.
 
-  More information: @/package-system $/kisslinux/repo
+  More information: @/package-system $/kiss-community/repo
 
 
 * PORTABLE PACKAGE MANAGER
@@ -43,7 +43,7 @@ ________________________________________________________________________________
   a large emphasis on portability. The only requirements are a POSIX compliant
   environment, curl and git.
 
-  More information: @/package-manager $/kisslinux/kiss
+  More information: @/package-manager $/kiss-community/kiss
 
 
 * BUS FACTOR OF ZERO
