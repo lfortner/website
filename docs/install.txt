@@ -79,7 +79,7 @@ Start by declaring a variable.
 
 +------------------------------------------------------------------------------+
 |                                                                              |
-|   $ url=https://github.com/kiss-community/repo/releases/download/2020.9-2         |
+|   $ url=https://github.com/kisslinux/repo/releases/download/2020.9-2         |
 |                                                                              |
 +------------------------------------------------------------------------------+
 
