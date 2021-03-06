@@ -1,6 +1,8 @@
 ABOUT THIS WEBSITE
 ________________________________________________________________________________
 
+An explanation for why Dylan chose what he did for this site. 
+
 This is not your run-of-the-mill website. It is not generated from something
 like Markdown, nor is it written in HTML. Each page is simply a .txt file which
 is inserted into &lt;pre&gt; tags that reside in a tiny template.

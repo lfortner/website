@@ -1,18 +1,22 @@
 DONATE
 ________________________________________________________________________________
 
-The running costs of KISS are currently moderate. Your support, however, will
-enable me (Dylan Araps) to dedicate more time as well as resources to the
-project, providing a better overall experience for all users.
+KISS is a passion project. I maintain it because I love it; I'm happy to incur a
+small amount of cost to keep it up. For larger things that might require more
+financial power, donations are welcome - reach out to me if you want. 
 
-Support development of KISS by sending a donation below.
+The best way you can help the project is by spreading the word and contributing. 
 
-- https://patreon.com/dyla                          |
-- <a href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V7QNJNKS3WYVS'>Paypal</a>
+However, if you feel compelled to donate monetarily, pick a good cause dedicated
+to FOSS. Don't feel obligated to help me directly outside of your time and
+interest in making KISS better!
 
 
 MERCH
 ________________________________________________________________________________
+
+The merch store is currently still up, but unused. I have absolutely no idea
+where the money you spend here will go, but feel free to buy stuff :)
 
 <a href="https://teespring.com/stores/k1ss">
 Support KISS by buying a T-shirt or sticker today!
