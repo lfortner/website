@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-find . -type f -name '*.txt' | \
-  while read i; do
-    sed -i -e 's|https://k1ss.armaanb.net|https://k1ss.armaanb.net|g' \
-      -e 's|\$/kisslinux/|\$/kiss-community/|g' ${i}
-  done
