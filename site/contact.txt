@@ -1,8 +1,12 @@
 GET IN TOUCH
 ________________________________________________________________________________
 
-Feel free to contact kiss-community at any of the following:
+Feel free to contact me (Dilyn Corner) at any of the following:
 
-- IRC:    #kisslinux at https://freenode.net
-- Reddit: https://reddit.com/r/kisslinux
-- GitHub: $/kiss-community
+- Email: dilyn.corner@k1sslinux.org
+
+Feel free to keep up with the broader KISS community at:
+
+- IRC:    #kisslinux at https://freenode.net - idling as dilyn
+- Reddit: https://reddit.com/r/kisslinux     - u/dilyn
+- GitHub: $/kiss-community                   - $/dilyn-corner
