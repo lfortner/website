@@ -1,0 +1,8 @@
+THE COMMUNITY
+________________________________________________________________________________
+
+- @/repositories
+- @/projects
+- @/ports
+- @/forks
+- @/extensions

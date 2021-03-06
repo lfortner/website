@@ -1,0 +1,105 @@
++------------------------------------------------------------------------------+
+|                                                                              |
+|                   _  _____ ___ ___  __      _____ _  _____                   |
+|                  | |/ /_ _/ __/ __\ \ \    / /_ _| |/ /_ _|                  |
+|                  | ' < | |\__ \__ \  \ \/\/ / | || ' < | |                   |
+|                  |_|\_\___|___/___/   \_/\_/ |___|_|\_\___|                  |
+|                                                                              |
+|           Welcome to the KISS WIKI. Documentation and information            |
+|           about KISS and Linux in general. Written by the Community.         |
+|                                                                              |
+|                                                                              |
+|                                                                              |
+|          .--------------------------------------------------------.          |
+|          |                                                        |          |
+|          | This wiki is incomplete, you can help by expanding it! |          |
+|          |                                                        | .--.     |
+|          '-------------------------------------------------------\\|o_o |    |
+|                                                                    |:_/ |    |
+|  Sources: $/kisslinux/wiki                                        //   \ \   |
+|                                                                  (|     | )  |
++------------------------------------------------------------------------------+
+
++-------------------------------------+  +-------------------------------------+
+|                                     |  |                                     |
+| DISTRIBUTION                        |  | WIKI                                |
+|                                     |  |                                     |
+|  @/kiss/style-guide                 |  |  @/help/about-this-wiki             |
+|                                     |  |  @/help/adding-a-page               |
+|                                     |  |  @/help/page-template               |
+|                                     |  |                                     |
++-------------------------------------+  +-------------------------------------+
+
++------------------------------------------------------------------------------+
+|                                                                              |
+| CONFIGURING THE KERNEL (@/kernel/config)                                     |
+|                                                                              |
+|  @/kernel/firmware                       @/kernel/thinkpad                   |
+|                                                                              |
+|  The below pages do not yet exist, they are merely an example (help!).       |
+|                                                                              |
+|  @/kernel/lenovo-yoga-900                @/kernel/surface-pro                |
+|                                                                              |
++------------------------------------------------------------------------------+
+
++------------------------------------------------------------------------------+
+|                                                                              |
+| COMMUNITY                                                                    |
+|                                                                              |
+|  @/community/repositories   Software repositories maintained by members of   |
+|                             the Community. Highlights include Wayland, KDE,  |
+|                             XFCE4, Bluez, dbus and PulseAudio.               |
+|                                                                              |
+|  @/community/ports          Ports of KISS to different architectures.        |
+|  @/community/projects       Community software projects.                     |
+|  @/community/forks          Forks of KISS Linux.                             |
+|  @/community/extensions     Extensions for the KISS package manager.         |
+|                                                                              |
++------------------------------------------------------------------------------+
+
++-------------------------------------+  +-------------------------------------+
+|                                     |  |                                     |
+| XORG                                |  | WAYLAND                             |
+|                                     |  |                                     |
+|  @/xorg/keyboard-layout             |  |                                     |
+|  @/xorg/sx                          |  |  TODO                               |
+|  @/xorg/x11-forwarding              |  |  TODO                               |
+|  @/xorg/x11vnc                      |  |  TODO                               |
+|  @/xorg/xinit                       |  |  TODO                               |
+|  @/xorg/xorg-server                 |  |                                     |
+|                                     |  |                                     |
++-------------------------------------+  +-------------------------------------+
+
++-----------------------+  +------------------------+  +-----------------------+
+|                       |  |                        |  |                       |
+| DEVICE MANAGERS       |  | INIT SYSTEMS           |  | BOOT                  |
+|                       |  |                        |  |                       |
+|  @/dev/replacing-udev |  |  @/init/busybox        |  |  @/boot/efistub       |
+|                       |  |  @/init/changing-init  |  |  @/boot/efivarfs      |
+|                       |  |  @/init/sysmgr         |  |                       |
+|                       |  |                        |  |                       |
++-----------------------+  +------------------------+  +-----------------------+
+
++------------------------------------------------------------------------------+
+|                                                                              |
+| SOFTWARE                                                                     |
+|                                                                              |
+|  @/software/acpid                         @/software/opendoas                |
+|  @/software/alsa-utils                    @/software/openssh                 |
+|  @/software/dhcpcd                        @/software/tzdata                  |
+|  @/software/eiwd                          @/software/vim                     |
+|  @/software/git                           @/software/wpa-supplicant          |
+|  @/software/man-pages                                                        |
+|                                                                              |
++------------------------------------------------------------------------------+
+
++-----------------------+  +------------------------+  +-----------------------+
+|                       |  |                        |  |                       |
+| CONSOLE               |  | DESKTOPS               |  | STORAGE               |
+|                       |  |                        |  |                       |
+|  @/console/bkeymaps   |  |  @/desktops/kde        |  |  @/storage/disks      |
+|  @/console/fonts      |  |                        |  |  @/storage/zram       |
+|                       |  |                        |  |  @/storage/zswap      |
+|                       |  |                        |  |                       |
++-----------------------+  +------------------------+  +-----------------------+
+
