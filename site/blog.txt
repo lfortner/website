@@ -3,8 +3,8 @@ ________________________________________________________________________________
 
 RSS Feed available here: @/blog/blog.xml
 
-- <a href=/blog/20210307a>07/03/2021: Trajectory.txt</a>
-- <a href=/blog/20200903a>03/09/2020: </a>
+- @/blog/20210223a Trajectory
+- @/blog/20200903a This month in KISS (#5)
 - @/blog/20200803a This month in KISS (#4)
 - @/blog/20200625a This month in KISS (#3)
 - @/blog/20200525a This month in KISS (#2)
