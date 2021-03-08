@@ -111,7 +111,7 @@ Start by declaring a variable.
 
 +------------------------------------------------------------------------------+
 |                                                                              |
-|   $ url=https://github.com/kisslinux/repo/releases/download/2020.9-2         |
+|   $ url=https://github.com/kiss-community/repo/releases/download/2021.3-1    |
 |                                                                              |
 +------------------------------------------------------------------------------+
 
@@ -121,7 +121,7 @@ Start by declaring a variable.
 
     +--------------------------------------------------------------------------+
     |                                                                          |
-    |   $ wget "$url/kiss-chroot-2020.9-2.tar.xz"                              |
+    |   $ wget "$url/kiss-chroot-2021.3-1.tar.xz"                              |
     |                                                                          |
     +--------------------------------------------------------------------------+
 
@@ -134,8 +134,8 @@ Start by declaring a variable.
 
     +--------------------------------------------------------------------------+
     |                                                                          |
-    |   $ wget "$url/kiss-chroot-2020.9-2.tar.xz.sha256"                       |
-    |   $ sha256sum -c < kiss-chroot-2020.9-2.tar.xz.sha256                    |
+    |   $ wget "$url/kiss-chroot-2021.3-1.tar.xz.sha256"                       |
+    |   $ sha256sum -c < kiss-chroot-2021.3-1.tar.xz.sha256                    |
     |                                                                          |
     +--------------------------------------------------------------------------+
 
@@ -151,19 +151,19 @@ Start by declaring a variable.
     | Download the armored ASCII file.                                         |
     +--------------------------------------------------------------------------+
     |                                                                          |
-    |   $ wget "$url/kiss-chroot-2020.9-2.tar.xz.asc"                          |
+    |   $ wget "$url/kiss-chroot-2021.3-1.tar.xz.asc"                          |
     |                                                                          |
     +--------------------------------------------------------------------------+
     | Import my public key (if this fails, try another keyserver).             |
     +--------------------------------------------------------------------------+
     |                                                                          |
-    |   $ gpg --keyserver keys.gnupg.net --recv-key 46D62DD9F1DE636E           |
+    |   $ gpg --keyserver keys.gnupg.net --recv-key DA4AB731D4C3F13D           |
     |                                                                          |
     +--------------------------------------------------------------------------+
     | Verify the signature.                                                    |
     +--------------------------------------------------------------------------+
     |                                                                          |
-    |   $ gpg --verify "kiss-chroot-2020.9-2.tar.xz.asc"                       |
+    |   $ gpg --verify "kiss-chroot-2021.3-1.tar.xz.asc"                       |
     |                                                                          |
     +--------------------------------------------------------------------------+
 
@@ -177,7 +177,7 @@ Start by declaring a variable.
     +--------------------------------------------------------------------------+
     |                                                                          |
     |   $ cd /mnt                                                              |
-    |   $ tar xvf /path/to/kiss-chroot-2020.9-2.tar.xz                         |
+    |   $ tar xvf /path/to/kiss-chroot-2021.3-1.tar.xz                         |
     |                                                                          |
     +--------------------------------------------------------------------------+
 
@@ -376,13 +376,13 @@ prevents any unsigned updates from reaching your system.
     | Import my public key.                                                    |
     +--------------------------------------------------------------------------+
     |                                                                          |
-    |    $ gpg --keyserver keys.gnupg.net --recv-key 46D62DD9F1DE636E          |
+    |    $ gpg --keyserver keys.gnupg.net --recv-key DA4AB731D4C3F13D          |
     |                                                                          |
     +--------------------------------------------------------------------------+
     | Trust my public key.                                                     |
     +--------------------------------------------------------------------------+
     |                                                                          |
-    |    $ echo trusted-key 0x46d62dd9f1de636e >>/root/.gnupg/gpg.conf         |
+    |    $ echo trusted-key DA4AB731D4C3F13D >>/root/.gnupg/gpg.conf           |
     |                                                                          |
     +--------------------------------------------------------------------------+
 
