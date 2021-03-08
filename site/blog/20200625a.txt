@@ -73,7 +73,7 @@ and the reading experience should now be far more enjoyable. For those wondering
 what the old website used to look like, see [1].
 
 [0] $/kiss-community/website/blob/master/make#L5-L29
-[1] https://web.archive.org/web/20200521223143/https://k1ss.armaanb.net/
+[1] https://web.archive.org/web/20200521223143/https://getkiss.org/
 
 
 [3.0] New Wiki
