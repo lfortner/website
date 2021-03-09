@@ -1,0 +1,180 @@
+<!doctype html><html lang=en><link href='data:image/gif;base64,R0lGODlhEAAQAPH/AAAAAP8AAP8AN////yH5BAUAAAQALAAAAAAQABAAAAM2SLrc/jA+QBUFM2iqA2bAMHSktwCCWJIYEIyvKLOuJt+wV69ry5cfwu7WCVp2RSPoUpE4n4sEADs=' rel=icon><title>KISS - 20210308a</title><meta charset=utf-8><meta name=Description content="An independent Linux distribution with a focus on simplicity and the concept of less is more."><meta name=viewport content="width=device-width,initial-scale=1"><style>body{overflow-y:scroll;font:16px monospace,monospace}img,.c{display:table-cell;max-width:999px;max-width:80ch}pre{margin:0;overflow-x:hidden}@media(max-width:999px){.c{display:block;font-size:1.94vw}}@media(prefers-color-scheme:dark){body{background:#000;color:#fff}a{color:#6CF}}</style><div style="display:table;margin:16px auto"><div class=c><pre style="top:0;position:sticky;user-select:none;padding-right:64px">
+<a href=/ style="text-decoration:none;color:#a00">
+|/
+|\ISS
+</a>
+<a href=/news>News</a>
+<a href=/blog>Blog</a>
+
+<a href=/wiki>Wiki</a>
+
+<a href=/install>Install KISS</a>
+<a href=/faq>FAQ</a>
+
+<a href=/package-system>Package System</a>
+<a href=/package-manager>Package Manager</a>
+<a href=/software>Software</a>
+
+<a href=/guidestones>Guidestones</a>
+
+<a href=/testimonials>Testimonials</a>
+<a href=/screenshots>Screenshots</a>
+<a href=/team>Team</a>
+
+<a href=/contact>Contact</a>
+<a href=/donate>Donate</a>
+
+<a href=https://github.com/kiss-community/>GitHub</a>
+<a href=https://git.k1sslinux.org/>Git (mirror)</a>
+
+</pre></div><div class=c><pre>
+
+
+Subject This month in KISS (#6)!
+From    Dilyn Corner <dilyn.corner@k1sslinux.org>
+Date    Mon, 8 Mar 2021 20:43:00 -0500
+
+
+Welcome to the return of our monthly update! There are just a few things to
+discuss, but I hope you find them interesting. 
+
+At the head, for those of you who use signature verification on the repos: my
+gpg key has finally found its way onto a keyserver! If you haven't had the
+chance to add my key yet, you can do so with these great one-liners:
+
+gpg --keyserver keys.gnupg.net --recv-key DA4AB731D4C3F13D
+echo trusted-key DA4AB731D4C3F13D >> /root/.gnupg/gpg.conf
+
+
+<span id=0.0><a href=#0.0>[0.0]</a></span> Index
+________________________________________________________________________________
+
+- The new domain                                                           <a href=#1.0>[1.0]</a>
+- Wiki updates                                                             <a href=#2.0>[2.0]</a>
+- Mirror...s?                                                              <a href=#3.0>[3.0]</a>
+- KISS-static                                                              <a href=#4.0>[4.0]</a>
+- Community                                                                <a href=#5.0>[5.0]</a>
+
+
+<span id=1.0><a href=#1.0>[1.0]</a></span> The new domain
+________________________________________________________________________________
+
+As you may have noticed, most of the links floating around (at least that I have
+direct access to) have been adjusted! Welcome to k1sslinux.org, the new website
+for KISS. 
+
+I, like probably many of you, have some attachments to previous names
+(getkiss.org is a personal favorite), and I know that many-a-domain had been
+setup in the interim, hosted by the likes of armaanb and mcpcpc, the latter of
+whom graciously offered to give me k1ss.net. But I'm a stickler for names, and
+my distate for certain TLDs runs deep. k1sslinux.org has a nice ring to it,
+matching the likes of other esoteric or enthusiast distros a la Arch, Void, and
+Alpine. If/when k1ss.org becomes available, I certainly would like to nab it.
+We'll see what happens.
+
+It was also great fun updating /etc/os-release. It marks, I think, the official
+change.
+
+
+<span id=2.0><a href=#2.0>[2.0]</a></span> Wiki updates
+________________________________________________________________________________
+
+The versions of the wiki and website published with the package manager have
+been updated to include the changes to the site, along with the fixes to the
+wiki - no longer should pages that definitely exist 404
+(@/<a href=/blog/wiki/software/wpa_supplicant>wiki/software/wpa_supplicant</a>), and several pages are no longer hidden from
+view (@/<a href=/blog/wiki/kernel/firmware>wiki/kernel/firmware</a>). 
+
+Additionally, some new articles are in the works. Some on Wayland, another the
+options within the kernel - a large undertaking, but one I've been meaning to do
+for quite some time. Remember: if you have an idea for something you would like
+to see in the Wiki, don't hesitate to submit a PR or start an issue for an idea!
+While I don't want the Wiki to be a replica of references that already exist,
+relevant information to KISS is always welcome! Even if it's short - the efistub
+article is great, and it's only 88 lines. The most important things in a wiki
+article are correctness and relevance. Simple and accurate are good goals to
+have!
+
+I will try to keep the docs distributed with kiss as up-to-date as possible, but
+not so frequent as to drive you mad with updates.
+
+
+<span id=3.0><a href=#3.0>[3.0]</a></span> Mirror...s?
+________________________________________________________________________________
+
+In August of last year, Dylan rolled out git.k1ss.org, a git mirror of the
+official repositories. I have spent the last week dusting off my webserver
+knowledge, and would like to announce the official repository mirrors! They are
+now hosted at <a href=https://git.k1sslinux.org>https://git.k1sslinux.org</a> (https specifically for those who DEMAND
+security). It's hosted on a cute little linode in Newark, NJ that is, bless it,
+running KISS! The server itself is setup with caddy (subject to change) with
+repositories generated by stagit, and changes to the GitHub repositories should
+be pushed almost immediately to their mirrors through the use of some git hooks. 
+I have mentioned several times now my interest in alternative VCS for KISS.
+Right now, I have a fossil mirror of the repositories setup at
+<a href=https://fossil.k1sslinux.org.>https://fossil.k1sslinux.org.</a> Currently, kiss is not equipped to use fossil
+repositories, and I haven't decided to what extent this should be pursued by me
+or left as an exercise for a motivated user. But they're there for those who are
+curious!
+
+Fossil is an alternative VCS to git. You can learn about fossil at
+<a href=https://fossil-scm.org/home/doc/trunk/www/index.wiki.>https://fossil-scm.org/home/doc/trunk/www/index.wiki.</a>
+
+As it stands, the repositories should be cloneable. Don't push to them though,
+please. Primary work will remain on GitHub, at $/<a href=https://github.com/kiss-community>kiss-community</a>
+
+
+<span id=4.0><a href=#4.0>[4.0]</a></span> KISS-static
+________________________________________________________________________________
+
+I don't want to use these posts to shill my own stuff too heavily, but Dylan was
+never around to see this production come to fruition! I'll just mention it
+briefly. $/<a href=https://github.com/dilyn-corner/KISS-static>dilyn-corner/KISS-static</a> is a fully functioning static tarball of
+KISS, clocking in at 18MB compressed. You can do all the things you would
+normally want to do on KISS... Except build packages. If you want that, you'll
+have to grab the lib tarball available on the releases page. At the very least,
+KISS-static would make for a wonderful little recovery system. The repository at
+the GitHub page is *rough*, mind you, but everything in the core directory
+should build with no problems. Have fun :) 
+
+
+<span id=5.0><a href=#5.0>[5.0]</a></span> Community
+________________________________________________________________________________
+
+For some parting words, something to say about the community repository! Here
+are some general guidelines I'd like to stick to (and these will probably be
+cross-posted to other places): 
+
+1) If you can, sign your commits! Not only because "Verified" stamps are cool as
+hell, but also because signature verification is great, and trusting each other
+is a great thing to do :)
+
+2) Make sure you include a package manifest (either within the PR itself or
+linked to at a pastebin) with all new packages and package version changes.
+This at least pretends to certify that the package builds; I don't have the
+energy or patience to build every package. Manifests are not required for
+relver bumps, and relver bumps should only be done if an update has to be made
+to a package AND that update requires the package be rebuilt.
+
+3) Expect an Issue tracker in the future - either a persistant one or one to
+appear regularly - tagging users who have out-of-date packages. Packages left
+out of date for 'sufficiently long' will be dropped and buried at
+$/<a href=https://github.com/kiss-community/kiss-graveyard,>kiss-community/kiss-graveyard,</a> where they can be summarily resurrected
+(reverting the commit which drops them also works). 
+
+4) I currently maintain several HUNDRED packages! It's not unbearable, but it's
+certainly a lot. If you would like to take over any of my packages in community,
+feel free to submit a PR (appending a space to the relver). Some of the packages
+maintained by $/<a href=https://github.com/git-bruh>git-bruh</a> are also de facto maintained by me, although I imagine
+who-maintains-what will be cleared up as updates roll in.
+
+
+________________________________________________________________________________
+
+Dylan Araps    (C) 2019-2020
+kiss-community (C) 2021
+Dilyn Corner   (C) 2021
+
+Linux(R) is the registered trademark of Linus Torvalds in the U.S. and
+other countries.
+</pre></div></div>

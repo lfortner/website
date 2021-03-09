@@ -3,6 +3,7 @@ ________________________________________________________________________________
 
 RSS Feed available here: @/blog/blog.xml
 
+- @/blog/20210308a This month in KISS (#6)
 - @/blog/20210223a Trajectory
 - @/blog/20200903a This month in KISS (#5)
 - @/blog/20200803a This month in KISS (#4)
