@@ -50,8 +50,8 @@ ________________________________________________________________________________
 The versions of the wiki and website published with the package manager have
 been updated to include the changes to the site, along with the fixes to the
 wiki - no longer should pages that definitely exist 404
-(@/wiki/software/wpa_supplicant), and several pages are no longer hidden from
-view (@/wiki/kernel/firmware). 
+(#/wiki/software/wpa_supplicant), and several pages are no longer hidden from
+view (#/wiki/kernel/firmware). 
 
 Additionally, some new articles are in the works. Some on Wayland, another the
 options within the kernel - a large undertaking, but one I've been meaning to do
