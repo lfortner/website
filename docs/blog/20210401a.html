@@ -1,0 +1,151 @@
+<!doctype html><html lang=en><link href='data:image/gif;base64,R0lGODlhEAAQAPH/AAAAAP8AAP8AN////yH5BAUAAAQALAAAAAAQABAAAAM2SLrc/jA+QBUFM2iqA2bAMHSktwCCWJIYEIyvKLOuJt+wV69ry5cfwu7WCVp2RSPoUpE4n4sEADs=' rel=icon><title>KISS - 20210401a</title><meta charset=utf-8><meta name=Description content="An independent Linux distribution with a focus on simplicity and the concept of less is more."><meta name=viewport content="width=device-width,initial-scale=1"><style>body{overflow-y:scroll;font:16px monospace,monospace}img,.c{display:table-cell;max-width:999px;max-width:80ch}pre{margin:0;overflow-x:hidden}@media(max-width:999px){.c{display:block;font-size:1.94vw}}@media(prefers-color-scheme:dark){body{background:#000;color:#fff}a{color:#6CF}}</style><div style="display:table;margin:16px auto"><div class=c><pre style="top:0;position:sticky;user-select:none;padding-right:64px">
+<a href=/ style="text-decoration:none;color:#a00">
+|/
+|\ISS
+</a>
+<a href=/news>News</a>
+<a href=/blog>Blog</a>
+
+<a href=/wiki>Wiki</a>
+
+<a href=/install>Install KISS</a>
+<a href=/faq>FAQ</a>
+
+<a href=/package-system>Package System</a>
+<a href=/package-manager>Package Manager</a>
+<a href=/software>Software</a>
+
+<a href=/guidestones>Guidestones</a>
+
+<a href=/testimonials>Testimonials</a>
+<a href=/screenshots>Screenshots</a>
+<a href=/team>Team</a>
+
+<a href=/contact>Contact</a>
+<a href=/donate>Donate</a>
+
+<a href=https://github.com/kiss-community/>GitHub</a>
+<a href=https://git.k1sslinux.org/>Git (mirror)</a>
+
+</pre></div><div class=c><pre>
+
+
+Subject 01/04/2021: This month in KISS (#7)!
+From    Dilyn Corner <dilyn.corner@k1sslinux.org>
+Date    Thu, 1 Apr 2021 08:00:00 -0500
+
+
+Welcome to month 7! A lot of small things have happened.
+
+
+<span id=0.0><a href=#0.0>[0.0]</a></span> Index
+________________________________________________________________________________
+
+- repo-bin                                                                 <a href=#1.0>[1.0]</a>
+- zig                                                                      <a href=#2.0>[2.0]</a>
+- Small things                                                             <a href=#3.0>[3.0]</a>
+- Fun notes                                                                <a href=#4.0>[4.0]</a>
+
+
+<span id=1.0><a href=#1.0>[1.0]</a></span> repo-bin
+________________________________________________________________________________
+
+Y'all may have noticed that Dylan stopped providing firefox-bin - relevant
+commit
+<a href=https://github.com/kisslinux/repo/commit/cbd962343faadd36d31623b729350c0143ee453e>https://github.com/kisslinux/repo/commit/cbd962343faadd36d31623b729350c0143ee453e</a>
+
+I know that I personally switched to a source-based distrubtion for more
+'control' over how my packages are built, and many of you probably had a similar
+inclination. But that doesn't change the fact that many users are on old or slow
+hardware, and some packages take quite a long time to build (on my 2014 Macbook
+Pro, chromium takes FORTY hours. FORTY!). 
+
+I recently acquired a far more powerful computer - chromium now takes less than
+an hour to build. As a result, I have looked into providing binaries for the
+larger packages we have, including some in community. These packages won't be
+modified from their source-based counterparts, and will be built using the same
+set of flags the release tarballs are made with. The current list of packages I
+will aim to provide are: chromium, clang, cmake, firefox{-esr}, llvm,
+qt5-webengine, and rust. More can be added to this list if need be. The goal is
+not to turn KISS into a binary distribution, just to save users some time. It
+may become the case one day that binary options will exist for EVERY package,
+but I don't know if I have the time or interest in doing this (though I will be
+investigating it). 
+
+Currently, firefox is available in $/<a href=https://github.com/kiss-community/repo-bin>kiss-community/repo-bin</a> - I have several
+more packages ready to go, I just didn't push them. I am currently on vacation
+in Tennessee, and will push them when I return later this month. To use these
+packages, simply prepend repo-bin/repo to your KISS_PATH so that they come
+before $/<a href=https://github.com/kiss-community/repo>kiss-community/repo</a> and $/<a href=https://github.com/kiss-community/community>kiss-community/community</a> - you can also fork
+them into your own repo if you'd prefer to only use bins of some of the
+packages. How wonderful!
+
+
+<span id=2.0><a href=#2.0>[2.0]</a></span> zig
+________________________________________________________________________________
+
+zig recently became buildable on KISS! Unfortunately, zig requires that llvm be
+built with all the targets, and our build in repo/extra currently only targets
+host and AMDGPU. Because of the size increase in the llvm package if we make the
+change required (over 100MB larger), and the fact that it would only be to
+support zig (which would live in community), I have decided to not accept zig
+into the community repository. However, you can find zig at $/<a href=https://github.com/Ominitay/kiss-zig>Ominitay/kiss-zig</a> 
+or $/<a href=https://github.com/mmatongo/kiss-lang>mmatongo/kiss-lang</a> 
+
+You can find my reasoning here $/<a href=https://github.com/kiss-community/repo-main/issues/31>kiss-community/repo-main/issues/31</a>
+
+
+<span id=3.0><a href=#3.0>[3.0]</a></span> Small things
+________________________________________________________________________________
+
+Mozilla seems to be moving firefox closer and closer to a GTK+2-free future.
+While I was under the impression that this would be happening at the end of
+December with the firefox 86 release, I should have known better. But the
+no-gtk2 patch that we have seems to work just fine (considering how heavily
+they're rewriting some parts of the code), and I hope to continue with the patch
+until Mozilla blesses us with a firefox that doesn't *entirely* rely on
+decades-old codebases. RIP gtk+2, and may you never return to repo/extra.
+
+In a similar vein, there is no clarity on when projects will stop relying on
+python2; chromium seems to be the last holdout, and who knows when that will
+change. If Google spent as much time on python2 as they do most of their other
+projects, they probably could've dropped the requirement years ago. 
+
+Void Linux and Gentoo have recently finalized their transition from libressl
+back to openssl, the best argument for this about-face being 'difficulty to
+maintain patches for compatibility'. The question was asked if KISS' ssl
+implementation will change, and the answer is 'no'. We have very few packages
+which require crypto libraries, and even fewer which actually require patches
+(rust requires a version bump, qt5* require small amounts of patch adjustment).
+Until using libressl becomes untenable, there is zero good reason to switch. You
+can find some of the discussions around here in the IRC logs:
+<a href=https://freenode.logbot.info/kisslinux/20210228#c7068386>https://freenode.logbot.info/kisslinux/20210228#c7068386</a>
+
+
+<span id=4.0><a href=#4.0>[4.0]</a></span> Fun notes
+________________________________________________________________________________
+
+A recent libva update saw a change in the headers relating to protected content,
+which caused some breakage with chromium. As far as I know, we were one of the
+first distros to have a patch ready for this problem - very exciting. Even more
+exciting, however, was the fact that this patch made its way all the way to an
+Arch PKGBUILD! We're a real distro now, folks.
+$/<a href=https://github.com/archlinux/svntogit-packages/blob/packages/chromium/trunk/PKGBUILD#L94>archlinux/svntogit-packages/blob/packages/chromium/trunk/PKGBUILD#L94</a>
+
+Dante Haversham has become the latest to embark on the illustrious path of
+rewriting our package manager in nonshell. First to the finish line wins praise,
+glory, and the knowledge that their contribution to the community is unique and
+will never be upstreamed :) They aim to have it be the same spirit as
+$/<a href=https://github.com/dylanaraps/k>dylanaraps/k</a> but 'a lot simpler', which are some of the best goals as far as
+I'm concerned. Find it here <a href=https://git.sr.ht/~dante/rpkg>https://git.sr.ht/~dante/rpkg</a>
+
+
+________________________________________________________________________________
+
+Dylan Araps    (C) 2019-2020
+kiss-community (C) 2021
+Dilyn Corner   (C) 2021
+
+Linux(R) is the registered trademark of Linus Torvalds in the U.S. and
+other countries.
+</pre></div></div>
