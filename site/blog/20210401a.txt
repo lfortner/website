@@ -57,10 +57,20 @@ built with all the targets, and our build in repo/extra currently only targets
 host and AMDGPU. Because of the size increase in the llvm package if we make the
 change required (over 100MB larger), and the fact that it would only be to
 support zig (which would live in community), I have decided to not accept zig
-into the community repository. However, you can find zig at $/Ominitay/kiss-zig 
+into the community repository. However, you can find zig at $/Ominitay/kiss-zig
 or $/mmatongo/kiss-lang 
 
 You can find my reasoning here $/kiss-community/repo-main/issues/31
+
+!!!UPDATE!!!
+
+It was discovered that some tweaking could be done to the zig build which allows
+it to be built with the version of llvm provided by the main repos! Anyone
+looking to do cross-compiling with zig will still have to build llvm by
+removing the -DLLVM_TARGETS_TO_BUILD line and rebuid zig, but you can find zig
+now over in community. Along with zig, lld has been merged as an optional
+replacement linker for the usual ld! If you already have llvm installed, maybe
+check it out.
 
 
 [3.0] Small things
