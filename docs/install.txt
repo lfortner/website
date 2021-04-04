@@ -881,6 +881,9 @@ You should now be able to reboot into your KISS installation. Typical
 configuration should follow (creation of users, service configuration,
 installing a window manager, terminal etc).
 
+While kiss is a simple package manager, it is highly extensible. Be sure to read
+about it at @/package-manager for useful options and tips.
+
 The KISS Wiki is a good place to look for post-installation information.
 
 +------------------------------------------------------------------------------+
