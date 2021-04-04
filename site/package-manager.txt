@@ -98,7 +98,7 @@ kept to a minimum (though we must also remain realistic).
 |------------------+------------------------------------------------+----------|
 | Privileges       |                                                |          |
 |------------------+------------------------------------------------+----------|
-| su | sudo | doas | Privilege escalation                           | No [5]   |
+| su | sudo-like   | Privilege escalation                           | No [5]   |
 |                  |                                                |          |
 |                  |                                                |          |
 |------------------+------------------------------------------------+----------|
@@ -318,8 +318,8 @@ They require little to no extra code in the package manager to support them.
 |   KISS_COMPRESS | Compression method to use for built package tarballs       |
 |                 | (defaults to 'gz'). Valid: bz2, gz, lzma, lz, xz, zst      |
 |                 |                                                            |
-|         KISS_SU | Force usage of a different sudo tool.                      |
-|                 | Valid: su, sudo, doas                                      |
+|         KISS_SU | The privilege escalation tool for installing packages      |
+|                 | (defaults to 'su'). Examples: sudo, doas, ssu, please      |
 |                 |                                                            |
 |      KISS_STRIP | Enable/Disable package stripping globally.                 |
 |                 | Set to '0' to disable.                                     |
@@ -428,7 +428,7 @@ used.
     +--------------------------------------------------------------------------+
     |                                                                          |
     |   # This can live anywhere on the system.                                |
-    |   $ git clone https://github.com/kiss-community/community                     |
+    |   $ git clone https://github.com/kiss-community/community                |
     |                                                                          |
     +--------------------------------------------------------------------------+
     | 2. Enable the repository                                                 |
