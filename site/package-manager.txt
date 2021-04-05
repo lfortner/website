@@ -36,6 +36,7 @@ ________________________________________________________________________________
     - Removing unneeded files from packages                                [6.2]
     - Building some packages in memory (tmpfs)                             [6.3]
     - Logging build duration                                               [6.4]
+    - Setting the terminal title                                           [6.5]
 
 - Package Manager Extensions                                               [7.0]
 
@@ -634,6 +635,31 @@ Example:
     |                                                                          |
     |               log "$PKG" "Build finished in ${_u:-${_s}s}"               |
     |           )                                                              |
+    |       ;;                                                                 |
+    |   esac                                                                   |
+    |                                                                          |
+    +--------------------------------------------------------------------------+
+    
+
+    [6.5] Setting the terminal title
+    ____________________________________________________________________________
+
+    This hook uses the Xterm escape sequence to change the terminal title, which
+    is supported by most modern terminal emulators. The title will include the
+    name of the package currently being build, the position in the batch and the
+    total amount of packages to be build. That way it's easy to keep track of
+    build progress, without having to scroll past a wall of compiler output.
+
+    +--------------------------------------------------------------------------+
+    |                                                                          |
+    |   case $TYPE in                                                          |
+    |       pre-extract)                                                       |
+    |           # If stderr is not a terminal, kiss is most likely run         |
+    |           # headlessly and changing the terminal title is pointless.     |
+    |           [ -t 2 ] && {                                                  |
+    |               printf '\033]0;kiss: %s (%d/%d)\a' \                       |
+    |                   "$PKG" "${pkg_cur:-?}" "${pkg_total:-?}" >&2           |
+    |           }                                                              |
     |       ;;                                                                 |
     |   esac                                                                   |
     |                                                                          |
