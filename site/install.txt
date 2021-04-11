@@ -184,6 +184,14 @@ nor does the package manager expect or /assume/ that any exist in a given
 location. This is entirely up to the user.
 
 
++------------------------------------------------------------------------------+
+|                                                                              |
+| TIP: Use the '--depth=1' flag when cloning repositories to avoid fetching    |
+|      git history, resulting in faster clones.                                |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+
     [3.1] Setting KISS_PATH
     ____________________________________________________________________________
 
@@ -258,7 +266,7 @@ location. This is entirely up to the user.
 
     +--------------------------------------------------------------------------+
     |                                                                          |
-    | $ git clone https://github.com/kiss-community/repo                            |
+    | $ git clone https://github.com/kiss-community/repo                       |
     |                                                                          |
     +--------------------------------------------------------------------------+
 
@@ -278,7 +286,7 @@ location. This is entirely up to the user.
 
     +--------------------------------------------------------------------------+
     |                                                                          |
-    | $ git clone https://github.com/kiss-community/community                       |
+    | $ git clone https://github.com/kiss-community/community                  |
     |                                                                          |
     +--------------------------------------------------------------------------+
 
