@@ -53,15 +53,16 @@ ________________________________________________________________________________
 
 - Install KISS                                                             <a href=#2.0>[2.0]</a>
     - Download the latest release                                          <a href=#2.1>[2.1]</a>
-    - Verify the checksums                                                 <a href=#2.2>[2.2]</a>
-    - Verify the signature                                                 <a href=#2.3>[2.3]</a>
+    - Verify the checksums (recommended)                                   <a href=#2.2>[2.2]</a>
+    - Verify the signature (recommended)                                   <a href=#2.3>[2.3]</a>
     - Unpack the tarball                                                   <a href=#2.4>[2.4]</a>
     - Enter the chroot                                                     <a href=#2.5>[2.5]</a>
 
 - Setup repositories                                                       <a href=#3.0>[3.0]</a>
-    - KISS_PATH                                                            <a href=#3.1>[3.1]</a>
+    - Setting KISS_PATH                                                    <a href=#3.1>[3.1]</a>
     - Official repositories                                                <a href=#3.2>[3.2]</a>
     - Community                                                            <a href=#3.3>[3.3]</a>
+    - Universe                                                             <a href=#3.4>[3.4]</a>
 
 - Enable repository signing                                                <a href=#4.0>[4.0]</a>
     - Build and install gnupg1                                             <a href=#4.1>[4.1]</a>
@@ -69,12 +70,12 @@ ________________________________________________________________________________
     - Enable Signature Verification                                        <a href=#4.3>[4.3]</a>
 
 - Rebuild KISS                                                             <a href=#5.0>[5.0]</a>
-    - Modify Compiler Options                                              <a href=#5.1>[5.1]</a>
+    - Modify Compiler Options (optional)                                   <a href=#5.1>[5.1]</a>
     - Update All Base Packages                                             <a href=#5.2>[5.2]</a>
     - Rebuild All Packages                                                 <a href=#5.3>[5.3]</a>
 
 - Userspace tools                                                          <a href=#6.0>[6.0]</a>
-    - Filesystems                                                          <a href=#6.1>[6.1]</a>
+    - Filesystem utilities                                                 <a href=#6.1>[6.1]</a>
     - Device management                                                    <a href=#6.2>[6.2]</a>
     - WiFi                                                                 <a href=#6.3>[6.3]</a>
     - Dynamic IP addressing                                                <a href=#6.4>[6.4]</a>
@@ -90,8 +91,9 @@ ________________________________________________________________________________
     - Install the kernel                                                   <a href=#8.6>[8.6]</a>
 
 - The bootloader                                                           <a href=#9.0>[9.0]</a>
-    - Build and install grub                                               <a href=#9.1>[9.1]</a>
-    - Setup grub                                                           <a href=#9.2>[9.2]</a>
+    - Recommended                                                          <a href=#9.1>[9.1]</a>
+    - Build and install grub                                               <a href=#9.2>[9.2]</a>
+    - Setup grub                                                           <a href=#9.3>[9.3]</a>
 
 - Install init scripts                                                    <a href=#10.0>[10.0]</a>
 - Set a root password                                                     <a href=#11.0>[11.0]</a>
@@ -417,7 +419,7 @@ prevents any unsigned updates from reaching your system.
     +--------------------------------------------------------------------------+
 
 
-<span id=5.0><a href=#5.0>[5.0]</a></span> Rebuild kiss
+<span id=5.0><a href=#5.0>[5.0]</a></span> Rebuild KISS
 ________________________________________________________________________________
 
 This step is entirely optional and can also be done post-installation.
@@ -457,7 +459,7 @@ This step is entirely optional and can also be done post-installation.
     +--------------------------------------------------------------------------+
 
 
-    <span id=5.2><a href=#5.2>[5.2]</a></span> Update all base packages to the latest version
+    <span id=5.2><a href=#5.2>[5.2]</a></span> Update all base packages
     ____________________________________________________________________________
 
     This is how updates are performed on a KISS system. This command uses git
@@ -547,7 +549,7 @@ The software below is required unless stated otherwise.
     +--------------------------------------------------------------------------+
 
 
-    <span id=6.3><a href=#6.3>[6.3]</a></span> WiFi (optional)
+    <span id=6.3><a href=#6.3>[6.3]</a></span> WiFi
     ____________________________________________________________________________
 
     +--------------------------------------------------------------------------+
@@ -558,7 +560,7 @@ The software below is required unless stated otherwise.
     +--------------------------------------------------------------------------+
 
 
-    <span id=6.4><a href=#6.4>[6.4]</a></span> Dynamic IP addressing (optional)
+    <span id=6.4><a href=#6.4>[6.4]</a></span> Dynamic IP addressing
     ____________________________________________________________________________
 
     +--------------------------------------------------------------------------+
@@ -860,7 +862,7 @@ Source code: $/<a href=https://github.com/kiss-community/init>kiss-community/ini
 +------------------------------------------------------------------------------+
 
 
-<span id=11.0><a href=#11.0>[11.0]</a></span> Change the root password (recommended)
+<span id=11.0><a href=#11.0>[11.0]</a></span> Set the root password
 ________________________________________________________________________________
 
 +------------------------------------------------------------------------------+
@@ -870,7 +872,7 @@ ________________________________________________________________________________
 +------------------------------------------------------------------------------+
 
 
-<span id=12.0><a href=#12.0>[12.0]</a></span> Add a normal user (recommended)
+<span id=12.0><a href=#12.0>[12.0]</a></span> Add a normal user
 ________________________________________________________________________________
 
 +------------------------------------------------------------------------------+
