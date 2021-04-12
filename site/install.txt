@@ -82,7 +82,8 @@ Start by declaring a variable.
 
 +------------------------------------------------------------------------------+
 |                                                                              |
-|   $ url=https://github.com/kiss-community/repo/releases/download/2021.3-2    |
+|   $ ver=2021.4-1                                                             |
+|   $ url=https://github.com/kiss-community/repo/releases/download/$ver        |
 |                                                                              |
 +------------------------------------------------------------------------------+
 
@@ -92,7 +93,7 @@ Start by declaring a variable.
 
     +--------------------------------------------------------------------------+
     |                                                                          |
-    |   $ wget "$url/kiss-chroot-2021.3-2.tar.xz"                              |
+    |   $ wget "$url/kiss-chroot-$ver.tar.xz"                                  |
     |                                                                          |
     +--------------------------------------------------------------------------+
 
@@ -105,8 +106,8 @@ Start by declaring a variable.
 
     +--------------------------------------------------------------------------+
     |                                                                          |
-    |   $ wget "$url/kiss-chroot-2021.3-2.tar.xz.sha256"                       |
-    |   $ sha256sum -c < kiss-chroot-2021.3-2.tar.xz.sha256                    |
+    |   $ wget "$url/kiss-chroot-$ver.tar.xz.sha256"                           |
+    |   $ sha256sum -c < "kiss-chroot-$ver.tar.xz.sha256"                      |
     |                                                                          |
     +--------------------------------------------------------------------------+
 
@@ -122,7 +123,7 @@ Start by declaring a variable.
     | Download the armored ASCII file.                                         |
     +--------------------------------------------------------------------------+
     |                                                                          |
-    |   $ wget "$url/kiss-chroot-2021.3-2.tar.xz.asc"                          |
+    |   $ wget "$url/kiss-chroot-$ver.tar.xz.asc"                              |
     |                                                                          |
     +--------------------------------------------------------------------------+
     | Import my public key (if this fails, try another keyserver).             |
@@ -134,7 +135,7 @@ Start by declaring a variable.
     | Verify the signature.                                                    |
     +--------------------------------------------------------------------------+
     |                                                                          |
-    |   $ gpg --verify "kiss-chroot-2021.3-2.tar.xz.asc"                       |
+    |   $ gpg --verify "kiss-chroot-$ver.tar.xz.asc"                           |
     |                                                                          |
     +--------------------------------------------------------------------------+
 
@@ -219,7 +220,7 @@ location. This is entirely up to the user.
     |  |                                                                       |
     |  +- personal/                                                            |
     |  |  - games/                                                             |
-    |  |  - web                                                                |
+    |  |  - web/                                                               |
     |  |                                                                       |
     |                                                                          |
     +--------------------------------------------------------------------------+
@@ -294,6 +295,17 @@ location. This is entirely up to the user.
 
     This will be cloned to a directory called 'community'. This directory
     contains a single KISS repository bearing the same name.
+
+    If you don't wish to use GitHub, you can alternatively clone the mirros:
+    
+    +--------------------------------------------------------------------------+
+    | Mirrors                                                                  |
+    +--------------------------------------------------------------------------+
+    |                                                                          |
+    | $ git clone git://git.k1sslinux.org/repo                                 |
+    | $ git clone git://git.k1sslinux.org/community                            |
+    |                                                                          |
+    +--------------------------------------------------------------------------+
 
 
     [3.4] Universe
@@ -461,8 +473,6 @@ ________________________________________________________________________________
 Each kiss action (build, install, etc) has a shorthand alias. From now on,
 'kiss b' and 'kiss i' will be used in place of 'kiss build' and 'kiss install'.
 
-The software below is required unless stated otherwise.
-
 
     [6.1] Filesystem utilities
     ____________________________________________________________________________
@@ -470,21 +480,21 @@ The software below is required unless stated otherwise.
     NOTE: Open an issue for additional filesystem support.
 
     +--------------------------------------------------------------------------+
-    | EXT2, EXT3, EXT4                                                         |
+    | EXT2, EXT3, EXT4 - required for EXT* filesystems                         |
     +--------------------------------------------------------------------------+
     |                                                                          |
     |   $ kiss b e2fsprogs                                                     |
     |   $ kiss i e2fsprogs                                                     |
     |                                                                          |
     +--------------------------------------------------------------------------+
-    | FAT, VFAT                                                                |
+    | FAT, VFAT - required for FAT filesystems, UEFI                           |
     +--------------------------------------------------------------------------+
     |                                                                          |
     |   $ kiss b dosfstools                                                    |
     |   $ kiss i dosfstools                                                    |
     |                                                                          |
     +--------------------------------------------------------------------------+
-    | XFS                                                                      |
+    | XFS - required for XFS filesystems                                       |
     +--------------------------------------------------------------------------+
     |                                                                          |
     |   $ kiss b xfsprogs                                                      |
@@ -497,7 +507,7 @@ The software below is required unless stated otherwise.
     ____________________________________________________________________________
 
     NOTE: If you choose to not install eudev, mdev will automatically be used in
-          its place. Eudev is recommended as a lot of software requires it.
+          its place. libudev-zero is recommended as a replacement for Eudev.
           See: @/wiki/dev/replacing-udev for more information.
 
     +--------------------------------------------------------------------------+
@@ -511,8 +521,8 @@ The software below is required unless stated otherwise.
     | The device manager.                                                      |
     +--------------------------------------------------------------------------+
     |                                                                          |
-    |   $ kiss b eudev                                                         |
-    |   $ kiss i eudev                                                         |
+    |   $ kiss b libudev-zero                                                  |
+    |   $ kiss i libudev-zero                                                  |
     |                                                                          |
     +--------------------------------------------------------------------------+
 
@@ -640,6 +650,8 @@ read the link (and the patch itself for more information). @/news/20200509a
 
     - https://wiki.archlinux.org/index.php/Kernel
 
+    A canonical place for building the kernel is /usr/src/linux
+
     +--------------------------------------------------------------------------+
     | Download the kernel sources.                                             |
     +--------------------------------------------------------------------------+
@@ -650,7 +662,7 @@ read the link (and the patch itself for more information). @/news/20200509a
     | Extract the kernel sources.                                              |
     +--------------------------------------------------------------------------+
     |                                                                          |
-    |   $ tar xvf KERNEL_SOURCE                                                |
+    |   $ tar xvf KERNEL_SOURCE.tar.gz                                         |
     |   $ cd linux-*                                                           |
     |                                                                          |
     +--------------------------------------------------------------------------+
@@ -670,8 +682,8 @@ read the link (and the patch itself for more information). @/news/20200509a
     | Download and extract the firmware.                                       |
     +--------------------------------------------------------------------------+
     |                                                                          |
-    |   $ wget FIRMWARE_SOURCE.tar.gz                                          |
-    |   $ tar xvf linux-firmware-20191022.tar.gz                               |
+    |   $ wget FIRMWARE_SOURCE                                                 |
+    |   $ tar xvf FIRMWARE_SOURCE.tar.gz                                       |
     |                                                                          |
     +--------------------------------------------------------------------------+
     | Copy the required drivers to '/usr/lib/firmware'.                        |
@@ -689,9 +701,7 @@ read the link (and the patch itself for more information). @/news/20200509a
     You can determine which drivers you need by searching the web for your
     hardware and the Linux kernel.
 
-    If you require firmware blobs, the drivers you enable must be enabled as
-    [m] (modules). You can also optionally include the firmware in the kernel
-    itself.
+    Checkout @/wiki/kernel for tips and information!
 
     +--------------------------------------------------------------------------+
     | Generate a default config with most drivers built into the kernel.       |
@@ -701,7 +711,7 @@ read the link (and the patch itself for more information). @/news/20200509a
     |                                                                          |
     +--------------------------------------------------------------------------+
     | Open an interactive menu to edit the generated .config and enable        |
-    | anything extra you may need..                                            |
+    | anything extra you may need.                                             |
     +--------------------------------------------------------------------------+
     |                                                                          |
     |   $ make menuconfig                                                      |
@@ -769,7 +779,8 @@ BIOS and UEFI are supported and vast amounts of documentation for it exists.
     [9.1] Recommended
     ____________________________________________________________________________
 
-    Have an /etc/fstab file ready.
+    Have an /etc/fstab file ready so that other partitions can be mounted
+    automatically during the boot-up process.
 
 
     [9.2] Build and install grub
@@ -917,7 +928,6 @@ The KISS Wiki is a good place to look for post-installation information.
 +------------------------------------------------------------------------------+
 
 If you encountered any issues, don't hesitate to open an issue on one of our
-GitHub repositories, post on https://reddit.com/r/kisslinux or join the
-IRC server.
+GitHub repositories, post on the subreddit, or join the IRC server.
 
 See: @/contact
