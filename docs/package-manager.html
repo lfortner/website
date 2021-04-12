@@ -68,6 +68,7 @@ ________________________________________________________________________________
     - Removing unneeded files from packages                                <a href=#6.2>[6.2]</a>
     - Building some packages in memory (tmpfs)                             <a href=#6.3>[6.3]</a>
     - Logging build duration                                               <a href=#6.4>[6.4]</a>
+    - Setting the terminal title                                           <a href=#6.5>[6.5]</a>
 
 - Package Manager Extensions                                               <a href=#7.0>[7.0]</a>
 
@@ -666,6 +667,31 @@ Example:
     |                                                                          |
     |               log "$PKG" "Build finished in ${_u:-${_s}s}"               |
     |           )                                                              |
+    |       ;;                                                                 |
+    |   esac                                                                   |
+    |                                                                          |
+    +--------------------------------------------------------------------------+
+    
+
+    <span id=6.5><a href=#6.5>[6.5]</a></span> Setting the terminal title
+    ____________________________________________________________________________
+
+    This hook uses the Xterm escape sequence to change the terminal title, which
+    is supported by most modern terminal emulators. The title will include the
+    name of the package currently being build, the position in the batch and the
+    total amount of packages to be build. That way it's easy to keep track of
+    build progress, without having to scroll past a wall of compiler output.
+
+    +--------------------------------------------------------------------------+
+    |                                                                          |
+    |   case $TYPE in                                                          |
+    |       pre-extract)                                                       |
+    |           # If stderr is not a terminal, kiss is most likely run         |
+    |           # headlessly and changing the terminal title is pointless.     |
+    |           [ -t 2 ] && {                                                  |
+    |               printf '\033]0;kiss: %s (%d/%d)\a' \                       |
+    |                   "$PKG" "${pkg_cur:-?}" "${pkg_total:-?}" >&2           |
+    |           }                                                              |
     |       ;;                                                                 |
     |   esac                                                                   |
     |                                                                          |
