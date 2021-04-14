@@ -32,7 +32,7 @@
 
 <a href="/wiki">wiki</a> / <a href='/wiki/kernel'>kernel</a> / config                                            <a href='https://github.com/kiss-community/wiki/edit/master/kernel/config.txt'>Edit this page</a>
 
-Edited (<a href='https://github.com/kiss-community/wiki/commit/51cbc6d44d2753e57f1f373042370a5ad9ac83f6'>51cbc6d</a>) at 2020-06-25 by FriendlyNeighborhoodShane
+Edited (<a href='https://github.com/kiss-community/wiki/commit/a7fc18204756dba2f8c5ea1c782d57ec4acdfe49'>a7fc182</a>) at 2021-04-13 by Dilyn Corner
 
 
 KERNEL CONFIGURATION GUIDE
@@ -133,7 +133,7 @@ you will be using is a pretty quick way to come up with a pretty lean
 configuration.
 
 
-<span id=3.0><a href=#3.0>[3.0]</a></span> Busybox compatibility
+<span id=3.0><a href=#3.0>[3.0]</a></span> Package compatibility
 ________________________________________________________________________________
 
 Various parts of the Linux build system use non-standard options with core
@@ -151,6 +151,21 @@ used), the kernel builds just fine.
 |                            headers that are generated during the build       |
 |                            process. These can be used to build eBPF tracing, |
 |                            or similar programs.                              |
+|                                                                              |
++------------------------------------------------------------------------------+
+
+Because gmp, mpc, and mpfr are bundled with our gcc instead of being built as
+standalone packages, the headers are missing. This results in build failures
+when building GCC Plugins. Either install gmp & mpc separately from gcc, or
+disable CONFIG_HAVE_GCC_PLUGINS in the kernel config.
+
++------------------------------------------------------------------------------+
+|                                                                              |
+| The following options are mandatory (when using busybox) (=n).               |
+|                                                                              |
+|   CONFIG_HAVE_GCC_PLUGINS  This option enables loadable modules that provide |
+|                            plugins for GCC which are useful for runtime      |
+|                            instrumentation and static analysis.              |
 |                                                                              |
 +------------------------------------------------------------------------------+
 
