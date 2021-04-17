@@ -759,3 +759,17 @@ them and the benefits they bring.
     |  $ kiss a gnugrep /usr/bin/grep                                          |
     |                                                                          |
     +--------------------------------------------------------------------------+
+
+    [8.2] Shallow cloning
+    ____________________________________________________________________________
+
+    By default, the package manager performs a shallow clone of the remote
+    repository, branch, or commit whenever possible. This is to speedup cloning,
+    and for most packages does not alter the package building process. 
+    
+    Some packages, however, use 'git describe --tags' to generate their
+    versioning scheme. Because of the shallow clone, the command will fail. To
+    resolve this problem, add 'git fetch --unshallow' in the build file. 
+    
+    For packages which require submodules, add 'git submodule update --init' to
+    pull in the required submodules. 
