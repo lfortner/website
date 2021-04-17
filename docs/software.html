@@ -151,13 +151,10 @@ KISS has no need for:
     intltool, autoconf, automake, libtool, yasm, shared-mime-info, ...
 
 
-Work is almost complete in removing more traditionally fundamental pieces of
-software from the distribution. The following pieces of software have been
-reduced to compile-time(!) dependencies of Firefox (and only Firefox).
-
-    - Python 2 (Porting effort to Python 3 still ongoing upstream).
-    - GTK+2    (Due to be removed upstream in 2020).
-    - Perl     (Used throughout the build process. Tricky).
+Additionally, Python2 and GTK+2 are no longer in the main repository, but are in
+community. These were previously required for Firefox, but that requirement has
+since been dropped! The only package remaining is Perl, which is a far trickier
+dependency to remove - it is integrated throughout the build system. 
 
 
 Trying to convey what software is excluded from the distribution is quite the
