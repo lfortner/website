@@ -42,6 +42,7 @@ ________________________________________________________________________________
 
 - Tips and Tricks                                                          [8.0]
     - Swap grep implementations for a major speed up                       [8.1]
+    - Shallow cloning                                                      [8.2]
 
 
 [1.0] Usage
