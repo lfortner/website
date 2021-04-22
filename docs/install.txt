@@ -506,9 +506,9 @@ Each kiss action (build, install, etc) has a shorthand alias. From now on,
     [6.2] Device management
     ____________________________________________________________________________
 
-    NOTE: If you choose to not install eudev, mdev will automatically be used in
-          its place. libudev-zero is recommended as a replacement for Eudev.
-          See: @/wiki/dev/replacing-udev for more information.
+    NOTE: If you choose to not install eudev, mdev will automatically be
+          used in its place during init. libudev-zero is recommended as an 
+          alternative to libudev.  See: @/wiki/dev/replacing-udev
 
     +--------------------------------------------------------------------------+
     | Needed for blkid support in eudev (recommended but not required).        |
@@ -521,8 +521,8 @@ Each kiss action (build, install, etc) has a shorthand alias. From now on,
     | The device manager.                                                      |
     +--------------------------------------------------------------------------+
     |                                                                          |
-    |   $ kiss b libudev-zero                                                  |
-    |   $ kiss i libudev-zero                                                  |
+    |   $ kiss b eudev                                                         |
+    |   $ kiss i eudev                                                         |
     |                                                                          |
     +--------------------------------------------------------------------------+
 
@@ -673,8 +673,8 @@ read the link (and the patch itself for more information). @/news/20200509a
 
     To keep the KISS repositories entirely FOSS, the proprietary kernel firmware
     is omitted. This also makes sense as the kernel itself is manually managed
-    by the user. This step is only required if your hardware utilizes makes use
-    of this firmware.
+    by the user. This step is only required if your hardware needs firmware. 
+    See @/wiki/kernel/firmware 
 
     https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
 
