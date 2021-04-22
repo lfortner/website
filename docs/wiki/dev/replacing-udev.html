@@ -33,7 +33,7 @@
 
 <a href="/wiki">wiki</a> / <a href='/wiki/dev'>dev</a> / replacing-udev                                       <a href='https://github.com/kiss-community/wiki/edit/master/dev/replacing-udev.txt'>Edit this page</a>
 
-Edited (<a href='https://github.com/kiss-community/wiki/commit/7ba67957c659ccbd85d25782ad2bd9277a99af73'>7ba6795</a>) at 2021-04-12 by git-bruh
+Edited (<a href='https://github.com/kiss-community/wiki/commit/92c0a5386458c8b107e776722c2c0a14ac85dfeb'>92c0a53</a>) at 2021-04-22 by Dilyn Corner
 
 
 REPLACING UDEV
@@ -133,10 +133,10 @@ ________________________________________________________________________________
 
   Alternatively, the uevent helper path can be set by the init system.
 
-  # echo "/bin/echo /usr/bin/uevent-helper <dir> > /proc/sys/kernel/hotplug"
+  # echo "/bin/echo /usr/bin/uevent-helper &ltdir&gt > /proc/sys/kernel/hotplug"
   #     > /etc/rc.d/uevent-helper.boot
 
-  Replace <dir> with the path where you want the uevent files to be stored, or
+  Replace &ltdir&gt with the path where you want the uevent files to be stored, or
   leave it empty to use the default path.
 
 
