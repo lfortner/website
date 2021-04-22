@@ -673,8 +673,8 @@ read the link (and the patch itself for more information). @/news/20200509a
 
     To keep the KISS repositories entirely FOSS, the proprietary kernel firmware
     is omitted. This also makes sense as the kernel itself is manually managed
-    by the user. This step is only required if your hardware utilizes makes use
-    of this firmware.
+    by the user. This step is only required if your hardware needs firmware. 
+    See @/wiki/kernel/firmware 
 
     https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
 
