@@ -40,7 +40,7 @@ how many people this impacts; there have only been a few reports in IRC,
 including me. There is a missing #include statement in one file.
 
 A simple:
-    sed -i '/<stdlib.h>/a #include <linux/stddef.h>' \
+    sed -i '/&ltstdlib.h&gt/a #include &ltlinux/stddef.h&gt' \
         tools/objtool/arch/x86/decode.c
 
 Should resolve the issue! 
