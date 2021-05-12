@@ -8,14 +8,14 @@
 <ttl>1800</ttl>
 <atom:link href="https://k1sslinux.org/news/news.xml" rel="self" type="application/rss+xml"/>
 <item>
-<title>07/05/2021: </title>
+    <title>07/05/2021: Kernel 5.12.0 build issue</title>
 <description></description>
 <link>https://k1sslinux.org/news/20210507a</link>
 <guid isPermaLink="true">https://k1sslinux.org/news/20210507a/</guid>
 <pubDate>Fri, 07 May 2021 00:00:00 +0000</pubDate>
 </item>
 <item>
-<title>14/04/2021: </title>
+<title>14/04/2021: Mailing list announcement</title>
 <description></description>
 <link>https://k1sslinux.org/news/20210414a</link>
 <guid isPermaLink="true">https://k1sslinux.org/news/20210414a/</guid>
