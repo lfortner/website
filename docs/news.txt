@@ -3,6 +3,7 @@ ________________________________________________________________________________
 
 RSS Feed available here: @/news/news.xml
 
+- @/news/20210519a Update on Dylan, IRC
 - @/news/20210507a Kernel 5.12.0 build issue
 - @/news/20210414a Mailing list announcement
 - @/news/20200811a Changes to repositories using symlinks to /var/db/kiss/repo

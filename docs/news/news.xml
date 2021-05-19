@@ -8,7 +8,14 @@
 <ttl>1800</ttl>
 <atom:link href="https://k1sslinux.org/news/news.xml" rel="self" type="application/rss+xml"/>
 <item>
-    <title>07/05/2021: Kernel 5.12.0 build issue</title>
+<title>19/05/2021: Update on Dylan, IRC</title>
+<description></description>
+<link>https://k1sslinux.org/news/20210519a</link>
+<guid isPermaLink="true">https://k1sslinux.org/news/20210519a/</guid>
+<pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
+</item>
+<item>
+<title>07/05/2021: Kernel 5.12.0 build issue</title>
 <description></description>
 <link>https://k1sslinux.org/news/20210507a</link>
 <guid isPermaLink="true">https://k1sslinux.org/news/20210507a/</guid>
