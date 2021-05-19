@@ -7,8 +7,8 @@ Feel free to contact me (Dilyn Corner) at any of the following:
 
 Feel free to keep up with the broader KISS community at:
 
-- IRC:       #kisslinux at https://freenode.net - idling as dilyn
-- Reddit:    https://reddit.com/r/kisslinux     - u/dilyn
-- GitHub:    $/kiss-community                   - $/dilyn-corner
-- Devel:     dev@k1sslinux.org                  - Development Mailing List
-- Community: community@k1sslinux.org            - Community Mailing List
+- IRC:       #kisslinux at https://libera.chat - idling as dilyn{[m],corner}
+- Reddit:    https://reddit.com/r/kisslinux    - u/dilyn
+- GitHub:    $/kiss-community                  - $/dilyn-corner
+- Devel:     dev@k1sslinux.org                 - Development Mailing List
+- Community: community@k1sslinux.org           - Community Mailing List
