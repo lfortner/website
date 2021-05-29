@@ -24,6 +24,7 @@ list of public logs:
 - https://libera.irclog.whitequark.org/kisslinux/2021-05-29
 - (@phoebos) https://gemini.ctrl-c.club/~phoebos/logs/
 - (@cem) https://irclogs.carbslinux.org/kisslinux/
+- (@acheam) https://irclogs.armaanb.net/kisslinux/
 
 Unfortunately, the above sources don't contain any logs from before
 #kisslinux switched to Libera. For an archive of previous logs from
