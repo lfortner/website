@@ -1,0 +1,55 @@
+KISS IRC
+________________________________________________________________________________
+
+IRC was originally in the #kisslinux channel on Freenode, but was moved
+to Libera following the hostile behaviour on the part of Andrew Lee (see
+#/blog/20210512a).
+
+You can connect via Libera's webchat at https://web.libera.chat/#kisslinux.
+
+
+[1.0] Index
+________________________________________________________________________________
+
+- Public Logs                                                              [2.0]
+- IRC Etiquette                                                           [3.0]
+
+
+[2.0] Public Logs
+________________________________________________________________________________
+
+The IRC channel is publicly logged by a few of the channel denizens. Here are a
+list of public logs:
+
+- https://libera.irclog.whitequark.org/kisslinux/2021-05-29
+- (@phoebos) https://gemini.ctrl-c.club/~phoebos/logs/
+- (@cem) https://irclogs.carbslinux.org/kisslinux/
+
+Unfortunately, the above sources don't contain any logs from before
+#kisslinux switched to Libera. For an archive of previous logs from
+Freenode, see https://freenode.logbot.info/kisslinux/.
+
+
+[3.0] IRC Etiquette
+________________________________________________________________________________
+
+The rules are simple: be excellent to each other, and use a pastebin
+when you want to share a long message.
+
+For those who need it spelled out:
+
+- Don't spam logs or error messages if they're longer than about 4 lines.
+  Use a pastebin (preferably https://0x0.st, as it doesn't require JS to
+  use).
+- When disagreeing, do so constructively [0][1].
+- Please refrain from discussing contentious topics such as US politics,
+  religion, or indentation styles in #kisslinux.
+- Racism, white supremacy sympathising, and the like will not be tolerated
+  under any circumstances.
+
+For questions, /msg dilyn, zr, or kiedtl.
+
+________________________________________________________________________________
+
+[0]: http://www.paulgraham.com/disagree.html
+[1]: https://en.wikipedia.org/wiki/File:Graham%27s_Hierarchy_of_Disagreement.svg
