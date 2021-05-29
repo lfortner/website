@@ -12,7 +12,7 @@ You can connect via Libera's webchat at https://web.libera.chat/#kisslinux.
 ________________________________________________________________________________
 
 - Public Logs                                                              [2.0]
-- IRC Etiquette                                                           [3.0]
+- IRC Etiquette                                                            [3.0]
 
 
 [2.0] Public Logs
