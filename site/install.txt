@@ -296,7 +296,7 @@ location. This is entirely up to the user.
     This will be cloned to a directory called 'community'. This directory
     contains a single KISS repository bearing the same name.
 
-    If you don't wish to use GitHub, you can alternatively clone the mirros:
+    If you don't wish to use GitHub, you can alternatively clone the mirrors:
     
     +--------------------------------------------------------------------------+
     | Mirrors                                                                  |
