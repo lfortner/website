@@ -19,7 +19,7 @@ This remains quick despite the loss in caching as each page is no larger than
 3-10 kilobytes. See: https://tools.pingdom.com/#5ca38087eb000000
 
 
-[0.0] Index
+[1.0] Index
 ________________________________________________________________________________
 
 - Favicon                                                                  [2.0]
