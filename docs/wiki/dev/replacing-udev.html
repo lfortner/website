@@ -33,7 +33,7 @@
 
 <a href="/wiki">wiki</a> / <a href='/wiki/dev'>dev</a> / replacing-udev                                       <a href='https://github.com/kiss-community/wiki/edit/master/dev/replacing-udev.txt'>Edit this page</a>
 
-Edited (<a href='https://github.com/kiss-community/wiki/commit/92c0a5386458c8b107e776722c2c0a14ac85dfeb'>92c0a53</a>) at 2021-04-22 by Dilyn Corner
+Edited (<a href='https://github.com/kiss-community/wiki/commit/dd5dc138291fc79d2601789bb5d1f14b89a7d9ae'>dd5dc13</a>) at 2021-05-27 by Dilyn Corner
 
 
 REPLACING UDEV
@@ -117,11 +117,11 @@ ________________________________________________________________________________
 
   +--------------------------------------------------------------------------+
   |                                                                          |
-  |   case $TYPE in                                                          |  
+  |   case $TYPE in                                                          |
   |       post-build)                                                        |
-  |           case $PKG in                                                   |
+  |           case "$PKG" in                                                 |
   |               libudev-zero)                                              |
-  |                   "${CC:-cc}" -o helper                                  |
+  |                   "${CC:-cc}" contrib/helper.c -o helper                 |
   |                   install -Dm755 helper "$DEST/usr/bin/uevent-helper"    |
   |               ;;                                                         |
   |           esac                                                           |
