@@ -27,9 +27,9 @@ list of public logs:
 - (@cem) https://irclogs.carbslinux.org/kisslinux/
 - (@acheam) https://irclogs.armaanb.net/kisslinux/
 
-Unfortunately, the above sources don't contain any logs from before
-#kisslinux switched to Libera. For an archive of previous logs from
-Freenode, see https://freenode.logbot.info/kisslinux/.
+Some but not all of the above sources contain logs from before #kisslinux
+switched to Libera. For an archive of previous logs from Freenode, see
+https://archive.logbot.info/.
 
 
 [3.0] IRC Etiquette
