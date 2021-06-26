@@ -22,7 +22,8 @@ The IRC channel is publicly logged by a few of the channel denizens. Here are a
 list of public logs:
 
 - https://libera.irclog.whitequark.org/kisslinux/
-- (@phoebos) https://gemini.ctrl-c.club/~phoebos/logs/
+- (@phoebos) https://ctrl-c.club/~phoebos/logs/
+- (@phoebos) gemini://gemini.ctrl-c.club/~phoebos/logs/
 - (@cem) https://irclogs.carbslinux.org/kisslinux/
 - (@acheam) https://irclogs.armaanb.net/kisslinux/
 
