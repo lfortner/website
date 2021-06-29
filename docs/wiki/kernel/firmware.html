@@ -35,7 +35,7 @@
 
 <a href="/wiki">wiki</a> / <a href='/wiki/kernel'>kernel</a> / firmware                                          <a href='https://github.com/kiss-community/wiki/edit/master/kernel/firmware.txt'>Edit this page</a>
 
-Edited (<a href='https://github.com/kiss-community/wiki/commit/87a63a77cc7c34f2f3aac18de44eb7424af4744d'>87a63a7</a>) at 2020-11-27 by aabacchus
+Edited (<a href='https://github.com/kiss-community/wiki/commit/0de2c4f3214580f7dd2711124d52bbdf7b2ab5b6'>0de2c4f</a>) at 2021-06-29 by sdsddsd1
 
 
 FIRMWARE
@@ -94,6 +94,15 @@ peripherals.
     |                                                                          |
     |   CONFIG_EXTRA_FIRMWARE_DIR="/lib/firmware"                              |
     |   CONFIG_EXTRA_FIRMWARE="****.ucode"                                     |
+    |                                                                          |
+    +--------------------------------------------------------------------------+
+    |   ".config" Example for a complex situation, where the required          |
+    |   firmware consists of several blobs across different folders of the     |
+    |   Linux Firmware package.                                                |
+    +--------------------------------------------------------------------------+
+    |                                                                          |
+    |   CONFIG_EXTRA_FIRMWARE_DIR="/lib/firmware"                              |
+    |   CONFIG_EXTRA_FIRMWARE="foo/bar1.bin foo/bar2.bin baz.ucode"            |
     |                                                                          |
     +--------------------------------------------------------------------------+
 
