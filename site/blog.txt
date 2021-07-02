@@ -3,7 +3,7 @@ ________________________________________________________________________________
 
 RSS Feed available here: @/blog/blog.xml
 
-- <a href=/blog/20210702a>02/07/2021: This month in KISS (#10)</a>
+- @/blog/20210702a This month in KISS (#10)
 - @/blog/20210609a This month in KISS (#9)
 - @/blog/20210512a This month in KISS (#8)
 - @/blog/20210401a This month in KISS (#7)
