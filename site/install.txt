@@ -433,8 +433,7 @@ This step is entirely optional and can also be done post-installation.
     | MAKEFLAGS                                                                |
     +--------------------------------------------------------------------------+
     |                                                                          |
-    |   # NOTE: 4 should be changed to match the number of threads.            |
-    |   $ export MAKEFLAGS="-j4"                                               |
+    |   $ export MAKEFLAGS="-j$(nproc)"                                        |
     |                                                                          |
     +--------------------------------------------------------------------------+
 
@@ -587,12 +586,14 @@ not done this before, below are a few guides to get you started.
 The Linux kernel is not managed by the package manager. The kernel is managed
 manually by the user. (Rationale: @/faq#7.3)
 
-KISS does not support booting using an initramfs (see @/faq#7.2). When
-configuring your kernel ensure that all required file-system, disk controller
-and USB drivers are built with [*] (=y) and not [m] (=m).
+KISS does not include an initramfs (see @/faq#7.2). When configuring your kernel
+ensure that all required file-system, disk controller and USB drivers are built
+with [*] (=y) and not [m] (=m) if you opt to not use one!
 
-A patch may be required for some kernels when built with GCC 10.1.0. Please
-read the link (and the patch itself for more information). @/news/20200509a
+Some adjustments may be required for certain kernel versions! Watch @/news for
+information on these problems. Here are some problems to be aware of:
+@/news/20210507a - A header issue with 5.12.*
+@/news/20200509a - GCC 10.1.0 patch
 
 +------------------------------------------------------------------------------+
 |                                                                              |
@@ -607,7 +608,7 @@ read the link (and the patch itself for more information). @/news/20200509a
 
     +--------------------------------------------------------------------------+
     |                                                                          |
-    | libelf (required in most if not all cases).                              |
+    | libelf (required in most and recommended).                               |
     |                                                                          |
     |   $ kiss b libelf                                                        |
     |   $ kiss i libelf                                                        |
@@ -625,7 +626,7 @@ read the link (and the patch itself for more information). @/news/20200509a
 
     +--------------------------------------------------------------------------+
     |                                                                          |
-    | perl (required in nearly all cases).                                     |
+    | perl (required in some cases).                                           |
     |                                                                          |
     |   $ kiss b perl                                                          |
     |   $ kiss i perl                                                          |
@@ -798,6 +799,9 @@ BIOS and UEFI are supported and vast amounts of documentation for it exists.
     |   $ kiss b efibootmgr                                                    |
     |   $ kiss i efibootmgr                                                    |
     |                                                                          |
+    |   TIP: efibootmgr can be used without grub on UEFI systems!              |
+    |        See @/wiki/boot/efistub                                           |
+    |                                                                          |
     +--------------------------------------------------------------------------+
 
 
@@ -812,7 +816,7 @@ BIOS and UEFI are supported and vast amounts of documentation for it exists.
     |   $ grub-mkconfig -o /boot/grub/grub.cfg                                 |
     |                                                                          |
     +--------------------------------------------------------------------------+
-    | UEFI (replace 'esp' with the EFI mount point)                            |
+    | UEFI (replace 'esp' with the EFI mount point, usually /boot)             |
     +--------------------------------------------------------------------------+
     |                                                                          |
     |   $ grub-install --target=x86_64-efi \                                   |
