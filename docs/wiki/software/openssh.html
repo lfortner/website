@@ -35,14 +35,14 @@
 
 <a href="/wiki">wiki</a> / <a href='/wiki/software'>software</a> / openssh                                         <a href='https://github.com/kiss-community/wiki/edit/master/software/openssh.txt'>Edit this page</a>
 
-Edited (<a href='https://github.com/kiss-community/wiki/commit/46d10377f4446f568e426be6c087e2aa6b4f191b'>46d1037</a>) at 2020-09-04 by fultons sabotage linux machine
+Edited (<a href='https://github.com/kiss-community/wiki/commit/8a55f77fd3d2bb708f1a528e0769780e31b11d36'>8a55f77</a>) at 2021-07-02 by Dilyn Corner
 
 
 OPENSSH <a href=#0>[0]</a>
 ________________________________________________________________________________
 
 OpenSSH (also known as OpenBSD Secure Shell) is a suite of secure networking
-utilities based on the Secure Shell (SSH) protocol, which provides a secure 
+utilities based on the Secure Shell (SSH) protocol, which provides a secure
 channel over an unsecured network in a client-server architecture.
 
 
@@ -65,7 +65,7 @@ Using busybox's runsv, create a new managed service for the ssh daemon:
 |                                                                              |
 +------------------------------------------------------------------------------+
 
-At this point, you can either restart the remote server or manually start the 
+At this point, you can either restart the remote server or manually start the
 SSH daemon:
 
 +------------------------------------------------------------------------------+
@@ -78,7 +78,7 @@ SSH daemon:
 Client Authentication
 ________________________________________________________________________________
 
-From an SSH client, use the following command to connect to the remote SSH 
+From an SSH client, use the following command to connect to the remote SSH
 server:
 
 +------------------------------------------------------------------------------+
@@ -87,7 +87,7 @@ server:
 |                                                                              |
 +------------------------------------------------------------------------------+
 
-Replace USERNAME with the name of a regular user and SERVER with the hostname or 
+Replace USERNAME with the name of a regular user and SERVER with the hostname or
 IP address of the SSH remote server. Upon pressing return, you will also be
 prompted to enter the password of the regular user specified.
 
@@ -95,7 +95,7 @@ prompted to enter the password of the regular user specified.
 Passwordless Authentication (Optional)
 ________________________________________________________________________________
 
-Passwordless login to a remove server can be achieved by creating a key pair. 
+Passwordless login to a remove server can be achieved by creating a key pair.
 From the SSH client, use the following command to generate the key:
 
 +------------------------------------------------------------------------------+
@@ -104,7 +104,7 @@ From the SSH client, use the following command to generate the key:
 |                                                                              |
 +------------------------------------------------------------------------------+
 
-Copy the id_rsa.pub file generated from the previous step into the remote 
+Copy the id_rsa.pub file generated from the previous step into the remote
 server's ~/.ssh/authorized_keys with the following command:
 
 +------------------------------------------------------------------------------+
@@ -113,7 +113,7 @@ server's ~/.ssh/authorized_keys with the following command:
 |                                                                              |
 +------------------------------------------------------------------------------+
 
-Replace USERNAME with the name of a regular user and SERVER with the hostname or 
+Replace USERNAME with the name of a regular user and SERVER with the hostname or
 IP address of the SSH remote server. Upon pressing return, you will also be
 prompted to enter the password of the regular user specified.
 

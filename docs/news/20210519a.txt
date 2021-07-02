@@ -4,14 +4,14 @@ Date    Wed, 19 May 2021 17:27:00 -0500
 
 Two small updates to share with you all here!
 
-Bottom line up front: 
+Bottom line up front:
     1) Dylan is okay!
     2) We have moved from Freenode to Libera.Chat
 
 
-Details: 
+Details:
 Previous attempts at divining Dylan's location or ways of contacting him were,
-as previously discussed, discarded. We wished him the best, and left it at that. 
+as previously discussed, discarded. We wished him the best, and left it at that.
 
 However! Someone (not Dylan) recently reached out to me with some news. They
 contacted who we assume to be Dylan's mum and kindly inquired as to how he was
@@ -23,7 +23,7 @@ the top thirty [1].
 
 We don't know if or when he'll return to this little project, but I think I
 speak for everyone when I say that we're glad to hear he's doing good and taking
-care of himself :) 
+care of himself :)
 
 
 For those of you not in-the-know, there has been a fair bit of drama in the land
@@ -40,7 +40,7 @@ reason (a Matrix bridge is in the works apparently, and they are still
 experiencing expected stability issues), the mailing lists are still available
 for people who prefer not to deal with IRC at any level :) We don't currently
 have a logbot in the channel, though one will probably makes it appearance soon
-(tomorrow, mayhaps).  
+(tomorrow, mayhaps).
 
 
 That's all I had for you fine folx. Until next time!

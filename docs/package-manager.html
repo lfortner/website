@@ -342,7 +342,7 @@ They require little to no extra code in the package manager to support them.
 |                 | any detected file conflicts.                               |
 |                 |                                                            |
 |       KISS_HOOK | Hook into the package manager. Set to the full path to the |
-|                 | script. See @/<a href=/wiki/kiss/package-manager-hooks>wiki/kiss/package-manager-hooks</a>              |
+|                 | script. See <a href=#6.0>[6.0]</a>                                          |
 |                 |                                                            |
 |       KISS_ROOT | Where installed packages will go. Can be used to install   |
 |                 | packages to somewhere other than '/'.                      |
@@ -409,8 +409,8 @@ Repository management in KISS is very simple. Repositories are configurable via
 an environment variable. This environment variable can be set system-wide,
 per-user, conditionally (via a script or program), for a single invocation, etc.
 
-The environment variable is called '$KISS_PATH' and is functionally identical to
-the '$PATH' variable. A colon separated list of paths in other words.
+The environment variable is called 'KISS_PATH' and is functionally identical to
+the '$PATH' variable. A colon separated list of paths, in other words.
 
 +------------------------------------------------------------------------------+
 | Example KISS_PATH                                                            |
@@ -614,7 +614,7 @@ Example:
     This hook runs on pre-extract and conditionally runs the source extraction,
     package build process and resulting tarball creation in memory. The benefit
     of this is a nice speedup throughout (especially when used alongside
-    ccache <a href=#0>[0]</a>).
+    ccache).
 
     NOTE: '/tmp' must be mounted as 'tmpfs' for this to work.
 
@@ -675,7 +675,7 @@ Example:
     |   esac                                                                   |
     |                                                                          |
     +--------------------------------------------------------------------------+
-    
+
 
     <span id=6.5><a href=#6.5>[6.5]</a></span> Setting the terminal title
     ____________________________________________________________________________
@@ -719,28 +719,30 @@ Example help output:
 +--------------------------------------------------------------------------+
 |                                                                          |
 |   -> Installed extensions (kiss-* in $PATH)                              |
-|   -> chbuild    Create/destroy temporary chroots                         |
-|   -> chroot     Enter a kiss chroot                                      |
-|   -> depends    Display a package's dependencies                         |
-|   -> export     Installed package to tarball                             |
-|   -> fork       Fork a package into the current dir                      |
-|   -> help       Read KISS documentation                                  |
-|   -> link       Link a repo file to another repo                         |
-|   -> maintainer Find the maintainer of a package                         |
-|   -> manifest   Display all files owned by a package                     |
-|   -> new        Create a boilerplate package                             |
-|   -> orphans    List orphaned packages                                   |
-|   -> outdated   Check repository packages for updates                    |
-|   -> owns       Check which package owns a file                          |
-|   -> reset      Remove all packages but base                             |
-|   -> revdepends Packages which depend on package                         |
-|   -> size       Show the size on disk for a package                      |
+|   -> chroot       Enter a kiss chroot                                    |
+|   -> depends      Display a package's dependencies                       |
+|   -> export       Installed package to tarball                           |
+|   -> fork         Fork a package into the current dir                    |
+|   -> graph        List all packages alphabetically with size             |
+|   -> help         Read KISS documentation                                |
+|   -> link         Link a repo file to another repo                       |
+|   -> maintainer   Find the maintainer of a package                       |
+|   -> manifest     Display all files owned by a package                   |
+|   -> new          Create a boilerplate package                           |
+|   -> orphans      List orphaned packages                                 |
+|   -> outdated     Check repository packages for updates                  |
+|   -> owns         Check which package owns a file                        |
+|   -> preferred    List the owners of all files with conflicts            |
+|   -> repo-orphans List all packages which aren't present in a repository |
+|   -> reset        Remove all packages but base                           |
+|   -> revdepends   Packages which depend on package                       |
+|   -> size         Show the size on disk for a package                    |
 |                                                                          |
 +--------------------------------------------------------------------------+
 
-These are in effect, optional utilities which interact with the package system
-in one way or another. My hope behind them is to act as an example as to how
-easy it is to interface with the plain-text and "static" package system.
+These are optional utilities which interact with the package system in one way
+or another. My hope behind them is to act as an example for how easy it is to
+interface with the plain-text and "static" package system.
 
 Example utility:
 
@@ -801,14 +803,11 @@ them and the benefits they bring.
 
     By default, the package manager performs a shallow clone of the remote
     repository, branch, or commit whenever possible. This is to speedup cloning,
-    and for most packages does not alter the package building process. 
-    
-    Some packages, however, use 'git describe --tags' to generate their
-    versioning scheme. Because of the shallow clone, the command will fail. To
-    resolve this problem, add 'git fetch --unshallow' in the build file. 
-    
+    and for most packages does not alter the package building process. This
+    shallow cloning is done in a way which still allows git --describe.
+
     For packages which require submodules, add 'git submodule update --init' to
-    pull in the required submodules. 
+    pull in the required submodules.
 
 
 ________________________________________________________________________________

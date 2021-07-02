@@ -8,20 +8,20 @@ We have a mailing list!
 ---
 
 One of the most frequent requests, probably since time immemorial, is to stop
-using GitHub so damn much. "It's not very KISS", they say. 
+using GitHub so damn much. "It's not very KISS", they say.
 
 So armed only with ignorance and a fervent desire to sate the appetites of our
-ravenous users, I set to work. 
+ravenous users, I set to work.
 
 I'm happy to say that the same server which hosts our git and fossil mirrors is
-now hosting our mailing list! Indeed, it's hosting my own email right now. 
+now hosting our mailing list! Indeed, it's hosting my own email right now.
 
 This post is about our lists specifically and not the server - if you want to
 learn more about what I've done with our little Linode, check out my own blog.
-It will be linked to at $/dilyn-corner/KISS-serv (and posted soon(tm)). 
+It will be linked to at $/dilyn-corner/KISS-serv (and posted soon(tm)).
 
 We have two lists! dev and community. They serve two purposes, and are meant to
-be alternatives to some GitHub analogues. Specifically, 
+be alternatives to some GitHub analogues. Specifically,
 
 dev@k1sslinux.org is similar to...
 $/kiss-community/repo
@@ -56,7 +56,7 @@ If you have never used a mailing list before, congratulations. It's pretty neat,
 you'll probably love it. Mailing lists usually have rules for participating,
 ours is no exception!
 
-1) To send an email to the list, just email the list. 
+1) To send an email to the list, just email the list.
 Do not alter the subject on replies.
 When REPLYING to an email you got from the list, ensure that the only recipient
 of the email is the list itself, not the original sender. (This may be a bug, I
@@ -66,7 +66,7 @@ their request :)
 
 
 2) Plain text please. HTML is gross. Pretty much every mail client allows you to
-configure this. Please do so. 
+configure this. Please do so.
 
 
 3) No top-posting. When replying to an email, reply to the relevant part
@@ -77,24 +77,24 @@ Q: Why is top posting frowned upon?
 
 
 4) Line wrap your emails to a reasonable number of characters. 80 is sane, 70 is
-pretty much golden. 
+pretty much golden.
 
 
 5) Be courteous. Don't spam. Be good.
 
 
 The dev mailing list is currently being archived at archive.k1sslinux.org! The
-community mailing list will be archived soon(tm). 
+community mailing list will be archived soon(tm).
 
 
-For more information on mailing list etiquette, you can refer to [1]. 
+For more information on mailing list etiquette, you can refer to [1].
 For more information on sending patches through email, please see [2].
 
 
 If you experience any bugs or issues with these lists, please let me know
 (preferably in IRC, or dilyn.corner@tutanota.com - I'll be keeping this account
 active for a while yet so it's safe). This mailing list is in BETA - there are
-kinks to be worked out almost definitely, but so far it has worked quite well! 
+kinks to be worked out almost definitely, but so far it has worked quite well!
 
 ---
     Dilyn

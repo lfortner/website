@@ -50,7 +50,7 @@ now with few issues. The beauty of KISS is that you can be your own BDFL :)
 I'm certain many of you are curious what I plan to do with these newfound powers
 and responsibilities, so I thought I would take some time to explain my plans,
 goals, and intentions. I have a tendency to be overly verbose, so I'll break
-this up into sections; feel free to read as much or as little as you'd like. 
+this up into sections; feel free to read as much or as little as you'd like.
 
 The Guidestones                                                            <a href=#1.0>[1.0]</a>
 The Package Manager                                                        <a href=#2.0>[2.0]</a>
@@ -70,12 +70,12 @@ with projects like $/<a href=https://github.com/eudaldgr/kiss-live>eudaldgr/kiss
 $/<a href=https://github.com/Himmalerin/kiss-wayland>Himmalerin/kiss-wayland</a> springing up to fill the gaps and needs of users, by
 users. And I think the 'by users' part is the most important thing. That users
 want to contribute and explore ideas, concepts, and features make KISS what it
-is - a maleable yet sturdy base on which you can create whatever you want. 
+is - a maleable yet sturdy base on which you can create whatever you want.
 
 Specifically, I see no reason to change the goals that define the main
 repositories. Dylan had previously spoken about switching to Wayland, only when
 it finally became apparant that using Xorg would be essentially impossible. See
-his discussion in IRC here: 
+his discussion in IRC here:
 <a href=https://freenode.logbot.info/kisslinux/20200912#c5073615>https://freenode.logbot.info/kisslinux/20200912#c5073615</a>
 Drew Devault will yet have his day, it seems.
 
@@ -89,12 +89,12 @@ place for good reason, and altering them should be a last resort. While my own
 personal repository is quite different from the core repository - strictly using
 Wayland and pursuing software under nonGPL licenses - I have no interest in
 imposing these restrictions on KISS as a whole. If that is something a user
-wants, they can do it themselves, like I did. 
+wants, they can do it themselves, like I did.
 
 The point on the existence of a 'below governance structure' is an important
 one; I do not wish to change this rule, and I will describe at the end what I
 intend to do so that the KISS project can avoid going through these last few
-months again. 
+months again.
 
 
 <span id=2.0><a href=#2.0>[2.0]</a></span> THE PACKAGE MANAGER
@@ -106,7 +106,7 @@ will be interesting to see how it turns out! Much like Dylan said when he
 started working on it, however, I have no plans of changing the fundamentals of
 the package manager much if at all - it is, in my opinion, feature complete, and
 most of our focus on it should be on extensions like kiss-orphans and kiss-graph
-than packing new lines of code into kiss itself. 
+than packing new lines of code into kiss itself.
 
 There have consistently been talks of adding a maintainer and license file to
 packages, adding metadata to the repositories, and otherwise tweaking packages.
@@ -120,19 +120,19 @@ software in the main repositories is necessarily F(L)OSS; extended concerns
 about which license is used by what package can be answered by simply
 downloading the source and investigating one of the files inside (usually
 COPYING or LICENSE). However, should users wish to install the license file WITH
-the package, I have no issue with allowing a one-liner to the end of community 
+the package, I have no issue with allowing a one-liner to the end of community
 build files:
 
 install -Dm644 COPYING "$1/usr/share/$1/$1.$licensename"
 
 This wouldn't violate the package guidelines, it's easily greppable for curious
-users, and everyone else can check the sources. 
+users, and everyone else can check the sources.
 
 There are a few small bugs in kiss; the infamous KISS_SU bug which caused a
 flurry of Reddit posts for instance, along with a few other ones. I would hope
 to fix these, and am more than happy to accept patches which add small, quality
 of life changes that do not fundamentally alter the package manager - in my
-eyes, kiss is essentially 'feature complete'. 
+eyes, kiss is essentially 'feature complete'.
 
 
 <span id=3.0><a href=#3.0>[3.0]</a></span> THE WEBSITE
@@ -142,11 +142,11 @@ With Dylan's disappearance, many things have slowly crumbled. The domain expired
 earlier this month, SSL certificates have expired, and of course the main
 repositories have been untouched. There has been a lot of discussion on IRC
 since January about what to do should Dylan not return before the website
-expires, and a loose plan emerged. 
+expires, and a loose plan emerged.
 
 Ideally, we (I, I guess) will be purchasing the domain when it goes up for
 auction sometime in March. This is to ensure some level of continuuity between
-Dylan's time as BDFL and the time we are in now.  
+Dylan's time as BDFL and the time we are in now.
 
 Conversations have been had on IRC (we talk a lot on IRC, you should look into
 joining us) and many users showed interest in taking a self-hosted direction
@@ -170,7 +170,7 @@ Modern Web(tm). I don't intend on making their work the official incarnation of
 the site, but users are certainly more than welcome to use it instead if that is
 what they would prefer. KISS is essentially self-documenting, and bundling the
 website with the package manager is convenient and, I think, best done from the
-simplest sources possible. 
+simplest sources possible.
 
 People have been talking about switching to Gemini. While this is perhaps
 arguably more inline with our goals and principles than the 'average Web', I
@@ -191,13 +191,13 @@ done for such a transition. That being said, I see no good reason it couldn't
 theoretically be supported - if we do not lock users into coreutils or init, why
 should we lock them into VCS? I will be exploring this soon(tm) in my own
 repository. As it stands, KISS will be sticking to git for a while, if not
-forever. 
+forever.
 
 Gaining access to $/<a href=https://github.com/kisslinux>kisslinux</a> is probably never going to happen, so
 hopefully we will be able to telegraph to the world to look elsewhere. An
 interim repository at $/<a href=https://github.com/kiss-community>kiss-community</a> was setup by a few members, and I see no
-good reason to change from it - no sense in making users switch to 
-Yet Another Upstream ReposiTory. 
+good reason to change from it - no sense in making users switch to
+Yet Another Upstream ReposiTory.
 
 As far as hosting the repositories on GitHub is concerned, my worries for
 self-hosting the website carry over here. Relying on a black box in someone's
@@ -208,7 +208,7 @@ have never done such a thing - the most I've ever hosted is a media server off
 of a screendead laptop in 2008. Hosting outside of GitHub will be explored and
 proper announcements made should something change, but there will always at
 least be a mirror of the repositories on GitHub. Here it was born, and here it
-shall stay. 
+shall stay.
 
 
 <span id=5.0><a href=#5.0>[5.0]</a></span> REDDIT & IRC
@@ -243,7 +243,7 @@ to bother with checking for their own updates and making their own packages; who
 can blame them? Eliminating duplication of effort is important. I don't know how
 long I'll be around (I plan to live forever, so far so good), and I'd like to
 see the repositories, wiki, website, etc. be more resilient and avoid having a
-single point of failure. 
+single point of failure.
 
 The point of having a BDFL is to ensure total control over the direction,
 trajectory, and development of the project. My primary aim is to follow the
@@ -266,20 +266,20 @@ repositories carry on. Think of them not as assistants, but failsafes.
 else should feel compelled to do this, unless I'm just *poof* gone.
 
 * The responsibility of keeping up with the website and wiki falls to me, with
-one other, different than the previous persons, also having access. 
+one other, different than the previous persons, also having access.
 
 The point is not to have multiple people in charge. Changes to anything
 regarding the package manager, inclusion in the repositories, adjustments to
-documentation, etc.etc.etc. should all go through me. 
+documentation, etc.etc.etc. should all go through me.
 The point is instead to ensure that, should I disappear or be deposed because
 I'm a jerk, users aren't left exposed. I don't want this to be Void. I don't aim
 to hold anyone's hand, but at the same time there is no good reason users of a
 distribution should not be allowed to opt into having their updates funneled
 through a singular channel.  That is, after all, the point - if users don't want
-that, they can choose otherwise. 
+that, they can choose otherwise.
 
 I have no announcements of who these people will be, but the changes won't
-effect much of how you would expect things to function if Dylan were still here. 
+effect much of how you would expect things to function if Dylan were still here.
 
 I am of course willing to hear feedback on this stark shift from Dylan's
 previous policy, and suggestions on any of this are welcome. You can always find
@@ -289,7 +289,7 @@ dilyn.corner@tutanota.com. If you find my address, you can even mail me a
 letter if you want.
 
 
-In conclusion, thanks for your faith. 
+In conclusion, thanks for your faith.
 
 ___
 

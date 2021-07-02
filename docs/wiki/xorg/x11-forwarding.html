@@ -35,7 +35,7 @@
 
 <a href="/wiki">wiki</a> / <a href='/wiki/xorg'>xorg</a> / x11-forwarding                                      <a href='https://github.com/kiss-community/wiki/edit/master/xorg/x11-forwarding.txt'>Edit this page</a>
 
-Edited (<a href='https://github.com/kiss-community/wiki/commit/fc3945cfed241bbaefb7ad93f6056d14837f1dc9'>fc3945c</a>) at 2020-06-10 by Michael Czigler
+Edited (<a href='https://github.com/kiss-community/wiki/commit/8a55f77fd3d2bb708f1a528e0769780e31b11d36'>8a55f77</a>) at 2021-07-02 by Dilyn Corner
 
 
 X11-FORWARDING <a href=#0>[0]</a>
@@ -50,7 +50,7 @@ the user's X11-server.
 Dependencies
 ________________________________________________________________________________
 
-In most cases, you will already have the required dependencies. At minimum, 
+In most cases, you will already have the required dependencies. At minimum,
 ensure that you have the following installed:
 
 +------------------------------------------------------------------------------+
@@ -139,13 +139,13 @@ ________________________________________________________________________________
 * You can further improve your connection speed by using a cypher to connect to
   the remove server. This can be passed as an argument using the "-c" switch
   at the initialization of a new SSH connection. <a href=#5>[5]</a>
-  
+
   +----------------------------------------------------------------------------+
   |                                                                            |
   |   $ ssh -X -C -c aes256-ctr user@localhost                                 |
   |                                                                            |
   +----------------------------------------------------------------------------+
-  
+
 * Your remote system most likely has many cypher options already available for
   you to choose from (es128-ctr, aes192-ctr, aes256-ctr, arcfour256, arcfour128,
   aes128-cbc, 3des-cbc, blowfish-cbc, cast128-cbc, aes192-cbc, aes256-cbc,

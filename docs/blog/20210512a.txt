@@ -2,19 +2,19 @@ Subject 12/05/2021: This month in KISS (#8)!
 From    Dilyn Corner
 Date    Wed, 12 May 2021 13:26:00 -0500
 
-Welcome to month 8! 
+Welcome to month 8!
 
 I took a small holiday and thought I had pushed this post before I left. Nope!
 Not a whole lot to discuss this time around, so just some quick updates.
 
 
 - Firefox will soon(tm) no longer require gtk+2 OFFICIALLY! We saw the final
-  cleaning commit here 
+  cleaning commit here
 $/mozilla/gecko-dev/commit/79e8df83dd3ff34c5d527c6320940292289af570
 
 - A subtle bug in how kiss handles dependencies that resulted in certain
   packages not being installed at the right time was resolved, thanks to some
-  good troubleshooting work and a very clean patch. Check out the discussions 
+  good troubleshooting work and a very clean patch. Check out the discussions
   and work here:
 $/kiss-community/kiss/commit/02a6791bbdbe51d9cd1eeb912bf0415a3b90a3b7
 $/kiss-community/kiss/issues/5

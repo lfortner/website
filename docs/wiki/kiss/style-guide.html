@@ -35,7 +35,7 @@
 
 <a href="/wiki">wiki</a> / <a href='/wiki/kiss'>kiss</a> / style-guide                                         <a href='https://github.com/kiss-community/wiki/edit/master/kiss/style-guide.txt'>Edit this page</a>
 
-Edited (<a href='https://github.com/kiss-community/wiki/commit/1350ff54a5ea7b0152a3d39627ef36241f56ffdf'>1350ff5</a>) at 2021-04-05 by git-bruh
+Edited (<a href='https://github.com/kiss-community/wiki/commit/8a55f77fd3d2bb708f1a528e0769780e31b11d36'>8a55f77</a>) at 2021-07-02 by Dilyn Corner
 
 
 PACKAGE STYLE GUIDE
@@ -366,7 +366,7 @@ ________________________________________________________________________________
     <span id=1100><a href=#1100>[1100]</a></span>----------------------------------------------------------------------
 
     Use the following style:
-    
+
        export GOPATH="$PWD/go"
        export GO111MODULE=on
 
@@ -375,10 +375,10 @@ ________________________________________________________________________________
            -trimpath
 
        install -Dm755 lazygit "$1/usr/bin/lazygit"
-       
+
     Note: If the directory 'vendor' is available in the root directory of the
     source, the preffered method is to omit GOPATH and GO111MODULE and use:
-    
+
         go build \
             -mod=vendor \
             -further-options
