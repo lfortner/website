@@ -297,7 +297,7 @@ location. This is entirely up to the user.
     contains a single KISS repository bearing the same name.
 
     If you don't wish to use GitHub, you can alternatively clone the mirrors:
-    
+
     +--------------------------------------------------------------------------+
     | Mirrors                                                                  |
     +--------------------------------------------------------------------------+
@@ -506,7 +506,7 @@ Each kiss action (build, install, etc) has a shorthand alias. From now on,
     ____________________________________________________________________________
 
     NOTE: If you choose to not install eudev, mdev will automatically be
-          used in its place during init. libudev-zero is recommended as an 
+          used in its place during init. libudev-zero is recommended as an
           alternative to libudev.  See: @/wiki/dev/replacing-udev
 
     +--------------------------------------------------------------------------+
@@ -674,8 +674,8 @@ information on these problems. Here are some problems to be aware of:
 
     To keep the KISS repositories entirely FOSS, the proprietary kernel firmware
     is omitted. This also makes sense as the kernel itself is manually managed
-    by the user. This step is only required if your hardware needs firmware. 
-    See @/wiki/kernel/firmware 
+    by the user. This step is only required if your hardware needs firmware.
+    See @/wiki/kernel/firmware
 
     https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
 

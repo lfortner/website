@@ -26,7 +26,7 @@ I know that I personally switched to a source-based distrubtion for more
 'control' over how my packages are built, and many of you probably had a similar
 inclination. But that doesn't change the fact that many users are on old or slow
 hardware, and some packages take quite a long time to build (on my 2014 Macbook
-Pro, chromium takes FORTY hours. FORTY!). 
+Pro, chromium takes FORTY hours. FORTY!).
 
 I recently acquired a far more powerful computer - chromium now takes less than
 an hour to build. As a result, I have looked into providing binaries for the
@@ -38,7 +38,7 @@ qt5-webengine, and rust. More can be added to this list if need be. The goal is
 not to turn KISS into a binary distribution, just to save users some time. It
 may become the case one day that binary options will exist for EVERY package,
 but I don't know if I have the time or interest in doing this (though I will be
-investigating it). 
+investigating it).
 
 Currently, firefox is available in $/kiss-community/repo-bin - I have several
 more packages ready to go, I just didn't push them. I am currently on vacation
@@ -58,7 +58,7 @@ host and AMDGPU. Because of the size increase in the llvm package if we make the
 change required (over 100MB larger), and the fact that it would only be to
 support zig (which would live in community), I have decided to not accept zig
 into the community repository. However, you can find zig at $/Ominitay/kiss-zig
-or $/mmatongo/kiss-lang 
+or $/mmatongo/kiss-lang
 
 You can find my reasoning here $/kiss-community/repo-main/issues/31
 
@@ -87,7 +87,7 @@ decades-old codebases. RIP gtk+2, and may you never return to repo/extra.
 In a similar vein, there is no clarity on when projects will stop relying on
 python2; chromium seems to be the last holdout, and who knows when that will
 change. If Google spent as much time on python2 as they do most of their other
-projects, they probably could've dropped the requirement years ago. 
+projects, they probably could've dropped the requirement years ago.
 
 Void Linux and Gentoo have recently finalized their transition from libressl
 back to openssl, the best argument for this about-face being 'difficulty to

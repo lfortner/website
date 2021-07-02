@@ -250,7 +250,7 @@ ________________________________________________________________________________
     may have different requirements from other distributions.
 
     1. The drivers for your disk controller, drives, and filesystems must not be
-    built as kernel modules. They should be set to =y in your .config or [*] 
+    built as kernel modules. They should be set to =y in your .config or [*]
     when using make menuconfig.
 
        Essentially, every driver the kernel requires to detect and mount the
