@@ -175,7 +175,8 @@ ________________________________________________________________________________
 
     * One exception is made for 'sed -i' which isn't POSIX but is far too useful
       to do away with. Many sed implementations include -i so this is more of a
-      non-issue.
+      non-issue. For those which don't, there is a package in
+      $/kiss-community/community (sed-i) which alleviates this issue!
 
     * The tar command has no standard interface, however support is included for
       busybox tar, libarchive tar (bsdtar), GNU tar and others.
@@ -243,15 +244,14 @@ ________________________________________________________________________________
     ____________________________________________________________________________
 
     The kernel not booting can be a variety of issues. This is almost always
-    related to a configuration issue in the kernel, /etc/fstab or the
-    bootloader.
+    related to a configuration issue in the kernel or the bootloader.
 
-    KISS doesn't use an initramfs so the configuration of the kernel may have
-    different requirements to other distributions.
+    KISS doesn't use an initramfs by default so the configuration of the kernel
+    may have different requirements from other distributions.
 
-    1. The drivers for your disk controller, drives and filesystems must not be
-       built as kernel modules. They should be set to =y in your .config or [*]
-       when using make menuconfig.
+    1. The drivers for your disk controller, drives, and filesystems must not be
+    built as kernel modules. They should be set to =y in your .config or [*] 
+    when using make menuconfig.
 
        Essentially, every driver the kernel requires to detect and mount the
        drive containing the root filesystem, must be built as a part of the
@@ -267,13 +267,10 @@ ________________________________________________________________________________
 
     KISS technically supports booting via an initramfs, it just doesn't require
     or provide one. As a user you have the means to set this up yourself for
-    your system.
+    your system. A simple one can be found at @/illiliti/tinyramfs
 
     Full disk encryption is also possible without the use of an initramfs in
     modern kernels (see dm-mod.create).
-
-    The initramfs concept is an ugly, complicated and largely optional mess.
-    Thank god it isn't a requirement.
 
 
     [7.3] Why must I compile my own kernel?
@@ -320,11 +317,6 @@ ________________________________________________________________________________
        demands a humongous, module heavy kernel with support for everything
        under the sun. An initramfs is then a requirement to boot this damn
        monstrosity.
-
-       There is then a need for a _portable_ initramfs generation tool which to
-       my knowledge doesn't exist. There can't be a dependence on bash or
-       anything outside of core. All initramfs tools are either
-       distribution-specific or non-portable to KISS.
 
        Then there'd be endless support requests for tweaks, additions and
        removals to the distribution config and the burden of updating the kernel
@@ -402,8 +394,11 @@ ________________________________________________________________________________
     [9.1] Why can't I start Xorg as a normal user?
     ____________________________________________________________________________
 
-    This is likely due to you running 'modprobe amdgpu' or equivalent post (or
-    late) boot which causes udev to miss setting up the GPU device in /dev/dri.
+    This is likely a apermissions problem. Ensure your user is in the correct
+    group (video). Otherwise, it may be that /dev/dri has the wrong permissions.
+
+    /dev/dri/* should be root:video, 0644. If they aren't, it's likely that the
+    device manager is setting permissions before your video card is found.
 
     There are three separate solutions ranging from easy to hard. Either of the
     three will solve the issue.
@@ -437,6 +432,7 @@ ________________________________________________________________________________
 
        This may include compiling proprietary firmware into the kernel as well
        which is a little bit finicky but doable.
+       See @/wiki/kernel/firmware for more information.
 
 
     [9.2] How do I take a screenshot?
