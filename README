@@ -1,11 +1,12 @@
 |/
-|\ISS                                                      https://k1sslinux.org
+|\ISS LINUX                                                https://kisslinux.org
 ________________________________________________________________________________
 
 
 Website
 ________________________________________________________________________________
 
-The KISS Linux website and documentation.
-
-NOTE: The docs/ directory contains the built sources.
+This is the repository hosting the source files for the former KISS-Community
+website, https://k1sslinux.org. If you are looking for the new KISS-Community
+website, please visit https://kisscommunity.org. If you are instead looking for
+the official KISS Linux website, please visit https://kisslinux.org.
